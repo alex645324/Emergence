@@ -1,1 +1,0 @@
-open /Users/alexpozo/development/Emergence/viewer/index.html 

@@ -1,0 +1,6743 @@
+{
+  "case_id": "hidalgo_kiskadee",
+  "outcome": "clean",
+  "summary": {
+    "escalation_pct": 33,
+    "clean_neighbor_pct": 33,
+    "neighbor_count": 15,
+    "node_count": 96,
+    "edge_count": 1101
+  },
+  "held_out_actions": [
+    {
+      "idx": 0,
+      "date": "2023-01-01",
+      "mechanism": "interconnection_agreement",
+      "jurisdiction": "county_commissioner",
+      "description": "Submitted ERCOT generation interconnection request (queue ID ERCOT-23INR0166) for 103.05 MW battery storage project in Hidalgo County, TX",
+      "node_id": "hidalgo_kiskadee__00",
+      "top_k": [
+        {
+          "case": "hill_sun_valley",
+          "mechanism": "interconnection_agreement",
+          "outcome": "clean",
+          "weight": 1.0,
+          "date": "2018-03-02",
+          "seq_pos": "project_announcement",
+          "is_escalation_mech": false
+        },
+        {
+          "case": "gillespie_marshall",
+          "mechanism": "interconnection_agreement",
+          "outcome": "escalation",
+          "weight": 1.0,
+          "date": "2025-01-01",
+          "seq_pos": "project_announcement",
+          "is_escalation_mech": false
+        },
+        {
+          "case": "kerr_black_mountain",
+          "mechanism": "interconnection_agreement",
+          "outcome": "escalation",
+          "weight": 0.7387,
+          "date": "2025-02-01",
+          "seq_pos": "escalation_same_jurisdiction",
+          "is_escalation_mech": false
+        },
+        {
+          "case": "gillespie_marshall",
+          "mechanism": "interconnection_agreement",
+          "outcome": "escalation",
+          "weight": 0.7335,
+          "date": "2026-01-28",
+          "seq_pos": "escalation_same_jurisdiction",
+          "is_escalation_mech": false
+        },
+        {
+          "case": "kerr_black_mountain",
+          "mechanism": "commissioner_resolution",
+          "outcome": "escalation",
+          "weight": 0.7,
+          "date": "2024-07-26",
+          "seq_pos": "project_announcement",
+          "is_escalation_mech": true
+        }
+      ]
+    },
+    {
+      "idx": 1,
+      "date": "2024-01-01",
+      "mechanism": "commercial_milestone",
+      "jurisdiction": "developer",
+      "description": "Established SA Grid Solutions joint venture; Great Kiskadee Storage assigned as first project owned under JV",
+      "node_id": "hidalgo_kiskadee__01",
+      "top_k": [
+        {
+          "case": "hill_sun_valley",
+          "mechanism": "commercial_milestone",
+          "outcome": "clean",
+          "weight": 0.967,
+          "date": "2021-04-01",
+          "seq_pos": "first_public_action",
+          "is_escalation_mech": false
+        },
+        {
+          "case": "hidalgo_anemoi",
+          "mechanism": "commercial_milestone",
+          "outcome": "clean",
+          "weight": 0.9161,
+          "date": "2022-09-01",
+          "seq_pos": "first_public_action",
+          "is_escalation_mech": false
+        },
+        {
+          "case": "hidalgo_anemoi",
+          "mechanism": "commercial_milestone",
+          "outcome": "clean",
+          "weight": 0.9025,
+          "date": "2022-02-01",
+          "seq_pos": "first_public_action",
+          "is_escalation_mech": false
+        },
+        {
+          "case": "hood_apache_hill",
+          "mechanism": "commercial_milestone",
+          "outcome": "under_construction",
+          "weight": 0.8446,
+          "date": "2026-01-01",
+          "seq_pos": "first_public_action",
+          "is_escalation_mech": false
+        },
+        {
+          "case": "fannin_platinum",
+          "mechanism": "commercial_milestone",
+          "outcome": "escalation",
+          "weight": 0.8265,
+          "date": "2022-01-01",
+          "seq_pos": "project_announcement",
+          "is_escalation_mech": false
+        }
+      ]
+    },
+    {
+      "idx": 2,
+      "date": "2024-01-01",
+      "mechanism": "permit_issuance",
+      "jurisdiction": "county_commissioner",
+      "description": "Construction continued in Hidalgo County under previously-secured permits; project initially anticipated COD Q3 2024 (per Apex financing announcement)",
+      "node_id": "hidalgo_kiskadee__02",
+      "top_k": [
+        {
+          "case": "hidalgo_anemoi",
+          "mechanism": "permit_issuance",
+          "outcome": "clean",
+          "weight": 0.9503,
+          "date": "2023-01-01",
+          "seq_pos": "first_public_action",
+          "is_escalation_mech": false
+        },
+        {
+          "case": "kendall_flat_rock",
+          "mechanism": "fire_code_enforcement",
+          "outcome": "withdrawn",
+          "weight": 0.6734,
+          "date": "2024-01-01",
+          "seq_pos": "first_regulatory_action",
+          "is_escalation_mech": true
+        },
+        {
+          "case": "gillespie_marshall",
+          "mechanism": "commissioner_resolution",
+          "outcome": "escalation",
+          "weight": 0.6707,
+          "date": "2025-11-03",
+          "seq_pos": "escalation_same_jurisdiction",
+          "is_escalation_mech": true
+        },
+        {
+          "case": "kendall_flat_rock",
+          "mechanism": "commissioner_resolution",
+          "outcome": "withdrawn",
+          "weight": 0.6503,
+          "date": "2024-01-01",
+          "seq_pos": "escalation_same_jurisdiction",
+          "is_escalation_mech": true
+        },
+        {
+          "case": "gillespie_rogers",
+          "mechanism": "health_safety_litigation",
+          "outcome": "escalation",
+          "weight": 0.611,
+          "date": "2025-11-26",
+          "seq_pos": "court_response_to_agency",
+          "is_escalation_mech": true
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "gillespie_rogers__00",
+      "case_id": "gillespie_rogers",
+      "date": "2025-02-24",
+      "mechanism": "commissioner_resolution",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "project_announcement",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Passed resolution opposing Battery Energy Storage Systems (BESS) in Gillespie County, citing safety, economic, and environmental concerns. Also passed resolution requiring documentation for Harper BES"
+    },
+    {
+      "id": "van_zandt__00",
+      "case_id": "van_zandt",
+      "date": "2024-01-01",
+      "mechanism": "project_announcement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "project_announcement",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Announced Amador Energy Storage Project (100MW/200MWh BESS) approximately 11 miles southwest of Canton, Van Zandt County, TX"
+    },
+    {
+      "id": "van_zandt__01",
+      "case_id": "van_zandt",
+      "date": "2024-10-31",
+      "mechanism": "project_announcement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "first_public_action",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Presented Amador BESS project to Van Zandt County Commissioners Court at workshop meeting"
+    },
+    {
+      "id": "gillespie_rogers__01",
+      "case_id": "gillespie_rogers",
+      "date": "2025-08-01",
+      "mechanism": "commissioner_resolution",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "As of this date, Peregrine Energy Solutions had not filed any of the required construction documents with Gillespie County. LCRA connection construction continued."
+    },
+    {
+      "id": "gillespie_rogers__02",
+      "case_id": "gillespie_rogers",
+      "date": "2025-09-05",
+      "mechanism": "court_injunction",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "court_response_to_agency",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Filed lawsuit in 216th Judicial District Court against Rogers Draw Energy Storage LLC and B&CWR Inc. (d/b/a Cactus Construction), seeking temporary and permanent injunction to stop construction of 145"
+    },
+    {
+      "id": "gillespie_rogers__03",
+      "case_id": "gillespie_rogers",
+      "date": "2025-11-26",
+      "mechanism": "health_safety_litigation",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "court_response_to_agency",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Filed Petition in Intervention in 216th Judicial District Court, joining the residents' lawsuit as a plaintiff opposing the Rogers Draw BESS. Simultaneously filed Response in Opposition to Rogers Draw"
+    },
+    {
+      "id": "gillespie_rogers__04",
+      "case_id": "gillespie_rogers",
+      "date": "2025-12-09",
+      "mechanism": "public_action",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Voted to take action on two energy projects. County announced it would file petition of intervention against Peregrine Energy (confirmed the Nov 26 filing). Residents packed meeting to voice concerns."
+    },
+    {
+      "id": "gillespie_rogers__05",
+      "case_id": "gillespie_rogers",
+      "date": "2025-12-11",
+      "mechanism": "court_injunction",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "court_response_to_agency",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Issued Stop Work Order to Rogers Draw Energy Storage LLC for the Rogers Draw BESS project in Harper, Texas"
+    },
+    {
+      "id": "gillespie_rogers__06",
+      "case_id": "gillespie_rogers",
+      "date": "2025-12-12",
+      "mechanism": "permit_denial_appeal",
+      "jurisdiction": "district_court",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Court issued Order DENYING Defendant Rogers Draw Energy Storage LLC's Rule 91a Motion to Dismiss and Request for Attorneys' Fees; Plaintiffs awarded entitlement to attorneys' fees under TRCP 91a.7"
+    },
+    {
+      "id": "gillespie_rogers__07",
+      "case_id": "gillespie_rogers",
+      "date": "2025-12-22",
+      "mechanism": "health_safety_litigation",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "court_response_to_agency",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Filed countersuit against Gillespie County in 216th Judicial District Court, claiming the county had initially approved the project and reversed course after citizen pressure. Sought dismissal of coun"
+    },
+    {
+      "id": "gillespie_rogers__08",
+      "case_id": "gillespie_rogers",
+      "date": "2026-01-12",
+      "mechanism": "health_safety_litigation",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "court_response_to_agency",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Filed Gillespie County's Answer to Rogers Draw Energy Storage LLC's Counterclaims in 216th Judicial District Court; argued threatened injury to public safety is \"sufficiently likely\" given county infr"
+    },
+    {
+      "id": "gillespie_rogers__09",
+      "case_id": "gillespie_rogers",
+      "date": "2026-01-14",
+      "mechanism": "court_injunction",
+      "jurisdiction": "district_court",
+      "seq_pos": "court_response_to_agency",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Agreed temporary injunction signed halting all construction activities on the Rogers Draw BESS project at Harper until final judgment. Trial date to be set"
+    },
+    {
+      "id": "katy_ochoa__00",
+      "case_id": "katy_ochoa",
+      "date": "2024-08-01",
+      "mechanism": "zoning_denial",
+      "jurisdiction": "municipal",
+      "seq_pos": "project_announcement",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Applied for Special Use Permit (SUP) to build Ochoa Energy Storage (500MW BESS) on approximately 24-acre property at 27051 Highway Blvd, Katy, TX. Holds two ERCOT queue positions (Ochoa I & II) repres"
+    },
+    {
+      "id": "katy_ochoa__01",
+      "case_id": "katy_ochoa",
+      "date": "2024-09-01",
+      "mechanism": "public_action",
+      "jurisdiction": "citizen_action",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Held \"lunch and learn\" community session for local residents to provide details on Ochoa project and energy storage industry"
+    },
+    {
+      "id": "katy_ochoa__02",
+      "case_id": "katy_ochoa",
+      "date": "2024-09-10",
+      "mechanism": "zoning_denial",
+      "jurisdiction": "municipal",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Recommended approval of the Special Use Permit for Ochoa Energy Storage"
+    },
+    {
+      "id": "katy_ochoa__03",
+      "case_id": "katy_ochoa",
+      "date": "2024-10-14",
+      "mechanism": "zoning_denial",
+      "jurisdiction": "municipal",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Unanimously denied Special Use Permit for Ochoa Energy Storage after public hearing with multiple residents voicing opposition. Overrode Planning and Zoning Committee recommendation. Motion by Council"
+    },
+    {
+      "id": "katy_ochoa__04",
+      "case_id": "katy_ochoa",
+      "date": "2024-10-24",
+      "mechanism": "public_action",
+      "jurisdiction": "municipal",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Citizens expressed continued opposition at city council meeting. Mayor Pro Tem Chris Harris cited proximity to schools and residential areas"
+    },
+    {
+      "id": "katy_ochoa__05",
+      "case_id": "katy_ochoa",
+      "date": "2025-10-21",
+      "mechanism": "permit_denial_appeal",
+      "jurisdiction": "municipal",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Filed appeal and application for declaratory order with Texas Public Utility Commission (PUC Docket No. 58859, SOAH Docket No. 473-26-07508). Argued City of Katy's zoning actions exceed regulatory aut"
+    },
+    {
+      "id": "katy_ochoa__06",
+      "case_id": "katy_ochoa",
+      "date": "2025-11-01",
+      "mechanism": "permit_denial_appeal",
+      "jurisdiction": "municipal",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Filed response to Ochoa's PUC appeal, arguing city ordinances do not interfere with PUC or ERCOT jurisdiction and do not conflict with state authority under PURA"
+    },
+    {
+      "id": "katy_ochoa__07",
+      "case_id": "katy_ochoa",
+      "date": "2025-12-01",
+      "mechanism": "permit_denial_appeal",
+      "jurisdiction": "state_agency",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Filed with PUC stating direct interest in the outcome of the case, asserting city's denial affects grid authority. PUC decision delayed"
+    },
+    {
+      "id": "katy_ochoa__08",
+      "case_id": "katy_ochoa",
+      "date": "2025-12-12",
+      "mechanism": "permit_denial_appeal",
+      "jurisdiction": "municipal",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Issued Draft Preliminary Order in Docket No. 58859 (Appeal of Ochoa Energy Storage LLC from Actions of the City of Katy and Application for Declaratory Order); Commission referred matter to ALJ at SOA"
+    },
+    {
+      "id": "katy_ochoa__09",
+      "case_id": "katy_ochoa",
+      "date": "2026-01-01",
+      "mechanism": "permit_denial_appeal",
+      "jurisdiction": "state_agency",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Procedural schedule set: Ochoa direct testimony April 10, 2026; City direct testimony May 15, 2026; Staff and ERCOT testimony June 1, 2026; Cross-rebuttal July 6, 2026; Hearing on the Merits August 4-"
+    },
+    {
+      "id": "katy_ochoa__10",
+      "case_id": "katy_ochoa",
+      "date": "2026-03-06",
+      "mechanism": "permit_denial_appeal",
+      "jurisdiction": "state_agency",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Deadline for Ochoa direct testimony filing per adopted procedural schedule (PUC Docket 58859 / SOAH Docket 473-26-07508)"
+    },
+    {
+      "id": "katy_ochoa__11",
+      "case_id": "katy_ochoa",
+      "date": "2026-04-13",
+      "mechanism": "permit_denial_appeal",
+      "jurisdiction": "municipal",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Deadline for City of Katy direct testimony filing per adopted procedural schedule (PUC Docket 58859 / SOAH Docket 473-26-07508)"
+    },
+    {
+      "id": "gillespie_marshall__00",
+      "case_id": "gillespie_marshall",
+      "date": "2025-01-01",
+      "mechanism": "interconnection_agreement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "project_announcement",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Proposed Marshall Springs Solar Complex and Battery Energy Storage System (~1,100 acres, 150MW solar + 150MW BESS) near Willow City in Gillespie County, TX. AMPYR described as an Indonesian energy inv"
+    },
+    {
+      "id": "gillespie_marshall__01",
+      "case_id": "gillespie_marshall",
+      "date": "2025-08-01",
+      "mechanism": "fire_code_enforcement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "first_regulatory_action",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Communicated in writing to AMPYR Energy that the Gillespie County Flood Damage Prevention Ordinance applies to the proposed Marshall Springs project"
+    },
+    {
+      "id": "gillespie_marshall__02",
+      "case_id": "gillespie_marshall",
+      "date": "2025-11-01",
+      "mechanism": "legislative_action",
+      "jurisdiction": "federal_agency",
+      "seq_pos": "legislative_response",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Sent letter to AMPYR Energy pressing for answers regarding the proposed 1,000-acre BESS and solar facility, citing concerns about Hill Country landscape, drought, wildfire, flash flooding risk, volunt"
+    },
+    {
+      "id": "gillespie_marshall__03",
+      "case_id": "gillespie_marshall",
+      "date": "2025-11-03",
+      "mechanism": "commissioner_resolution",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Passed resolution opposing Solar and BESS projects, specifically targeting the proposed Marshall Springs project. Required Marshall Springs Solar Farm and BESS documentation"
+    },
+    {
+      "id": "gillespie_marshall__04",
+      "case_id": "gillespie_marshall",
+      "date": "2025-12-01",
+      "mechanism": "fire_code_enforcement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Sent formal Notice of Applicability of Gillespie County Flood Damage Prevention Ordinance to the proposed Marshall Springs Solar Complex and Battery Energy Storage System Project"
+    },
+    {
+      "id": "gillespie_marshall__05",
+      "case_id": "gillespie_marshall",
+      "date": "2025-12-01",
+      "mechanism": "public_action",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Held information meeting with senior representatives of federal, state, county, and city officials. Attendees included aides to U.S. Senator John Cornyn, U.S. Senator Ted Cruz, U.S. Rep. Chip Roy, Tex"
+    },
+    {
+      "id": "gillespie_marshall__06",
+      "case_id": "gillespie_marshall",
+      "date": "2025-12-09",
+      "mechanism": "public_action",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Residents packed commissioners court meeting to voice continued concerns with both the Marshall Springs and Rogers Draw projects"
+    },
+    {
+      "id": "gillespie_marshall__07",
+      "case_id": "gillespie_marshall",
+      "date": "2026-01-28",
+      "mechanism": "interconnection_agreement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Signed ERCOT interconnection agreement for 150MW Marshall Springs Solar project in Gillespie County, advancing the development despite local opposition"
+    },
+    {
+      "id": "gillespie_marshall__08",
+      "case_id": "gillespie_marshall",
+      "date": "2026-02-05",
+      "mechanism": "legislative_action",
+      "jurisdiction": "federal_agency",
+      "seq_pos": "legislative_response",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Sent follow-up letter to AMPYR Energy renewing pressure, requesting answers on Chinese components and funding sources, environmental risks, and community impact"
+    },
+    {
+      "id": "gillespie_marshall__09",
+      "case_id": "gillespie_marshall",
+      "date": "2026-03-11",
+      "mechanism": "health_safety_litigation",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "court_response_to_agency",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Filed lawsuit (Case No. 26-18599) against Marshall Springs Storage LLC, Marshall Springs Solar LLC, and Ampyr Energy USA LLC in Gillespie County District Court"
+    },
+    {
+      "id": "hill_sun_valley__00",
+      "case_id": "hill_sun_valley",
+      "date": "2018-03-02",
+      "mechanism": "interconnection_agreement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "project_announcement",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Submitted ERCOT generation interconnection request (queue ID ERCOT-19INR0169) for 250 MW Sun Valley Solar in Hill County, TX"
+    },
+    {
+      "id": "hill_sun_valley__01",
+      "case_id": "hill_sun_valley",
+      "date": "2020-03-15",
+      "mechanism": "interconnection_agreement",
+      "jurisdiction": "state_agency",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Standard Generation Interconnection Agreement (SGIA) executed for 250 MW Sun Valley Solar at 345 kV Sam Sw \u2013 Tradinghouse tap"
+    },
+    {
+      "id": "hill_sun_valley__02",
+      "case_id": "hill_sun_valley",
+      "date": "2021-04-01",
+      "mechanism": "commercial_milestone",
+      "jurisdiction": "developer",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Long-term Virtual Power Purchase Agreement (VPPA) executed between P&G and ENGIE for output of 250 MW Sun Valley Solar Center"
+    },
+    {
+      "id": "hill_sun_valley__03",
+      "case_id": "hill_sun_valley",
+      "date": "2022-07-26",
+      "mechanism": "tax_abatement_agreement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Approved proposed format of Tax Abatement Agreement with Sun Valley Storage, LLC and ordered notice posted on county bulletin board and online (Judge Lewis and all Commissioners voted to approve)"
+    },
+    {
+      "id": "hill_sun_valley__04",
+      "case_id": "hill_sun_valley",
+      "date": "2022-09-13",
+      "mechanism": "tax_abatement_agreement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Held public hearing on Hill County's intent to enter into Tax Abatement Agreement with Sun Valley Storage, LLC relating to the solar energy storage project; agenda item included \"Discussion and possib"
+    },
+    {
+      "id": "hill_sun_valley__05",
+      "case_id": "hill_sun_valley",
+      "date": "2022-09-20",
+      "mechanism": "commercial_milestone",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Public announcement of 200 MW PPA from Sun Valley Solar (\"located in Hill County, Texas, 65 miles southwest of Dallas\"); >530,000 MWh/year to P&G"
+    },
+    {
+      "id": "hill_sun_valley__06",
+      "case_id": "hill_sun_valley",
+      "date": "2022-11-01",
+      "mechanism": "commercial_operation",
+      "jurisdiction": "state_agency",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Sun Valley Solar (250 MW) reached commercial operations and began delivering energy to ERCOT"
+    },
+    {
+      "id": "hill_sun_valley__07",
+      "case_id": "hill_sun_valley",
+      "date": "2023-04-28",
+      "mechanism": "permit_issuance",
+      "jurisdiction": "federal_agency",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Filed self-certification of Exempt Wholesale Generator (EWG) status with FERC (Docket No. EG23-140-000) for 100 MW co-located battery storage facility"
+    },
+    {
+      "id": "hill_sun_valley__08",
+      "case_id": "hill_sun_valley",
+      "date": "2023-07-10",
+      "mechanism": "permit_issuance",
+      "jurisdiction": "federal_agency",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Issued Notice of Effectiveness of Sun Valley Storage's EWG status (Docket No. EG23-140-000)"
+    },
+    {
+      "id": "hill_sun_valley__09",
+      "case_id": "hill_sun_valley",
+      "date": "2023-12-19",
+      "mechanism": "commercial_operation",
+      "jurisdiction": "state_agency",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Announced commissioning of Sun Valley Battery Storage project (100 MW / 100 MWh, 308 battery cabinets) co-located with the 250 MW Sun Valley Solar plant; ~3,500 workdays on the project. Reaches commer"
+    },
+    {
+      "id": "hidalgo_anemoi__00",
+      "case_id": "hidalgo_anemoi",
+      "date": "2021-01-01",
+      "mechanism": "project_announcement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "project_announcement",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Plus Power began developing Anemoi Energy Storage project; commenced outreach and engagement with Hidalgo County Planning Department and Fire Marshal's office"
+    },
+    {
+      "id": "hidalgo_anemoi__01",
+      "case_id": "hidalgo_anemoi",
+      "date": "2021-11-01",
+      "mechanism": "interconnection_agreement",
+      "jurisdiction": "state_agency",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Conducted ERCOT interconnectability study for Anemoi Energy Storage"
+    },
+    {
+      "id": "hidalgo_anemoi__02",
+      "case_id": "hidalgo_anemoi",
+      "date": "2022-01-01",
+      "mechanism": "interconnection_agreement",
+      "jurisdiction": "state_agency",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Generation Interconnection Agreement executed for 200 MW BESS adjacent to AEP Pomelo 345 kV substation"
+    },
+    {
+      "id": "hidalgo_anemoi__03",
+      "case_id": "hidalgo_anemoi",
+      "date": "2022-02-01",
+      "mechanism": "commercial_milestone",
+      "jurisdiction": "developer",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Engineering, Procurement & Construction (EPC) contract executed for the 200 MW / 400 MWh BESS"
+    },
+    {
+      "id": "hidalgo_anemoi__04",
+      "case_id": "hidalgo_anemoi",
+      "date": "2022-09-01",
+      "mechanism": "commercial_milestone",
+      "jurisdiction": "developer",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Project site purchase option agreement executed for ~13 acres near Edinburg, TX (south of McCook)"
+    },
+    {
+      "id": "hidalgo_anemoi__05",
+      "case_id": "hidalgo_anemoi",
+      "date": "2023-01-01",
+      "mechanism": "permit_issuance",
+      "jurisdiction": "state_agency",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Issued construction-related permit to Anemoi Energy Storage LLC"
+    },
+    {
+      "id": "hidalgo_anemoi__06",
+      "case_id": "hidalgo_anemoi",
+      "date": "2023-01-01",
+      "mechanism": "permit_issuance",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Issued building permit to Anemoi Energy Storage LLC for 200 MW BESS facility"
+    },
+    {
+      "id": "hidalgo_anemoi__07",
+      "case_id": "hidalgo_anemoi",
+      "date": "2023-02-01",
+      "mechanism": "commercial_milestone",
+      "jurisdiction": "developer",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Phase I Environmental Site Assessment completed for project parcel"
+    },
+    {
+      "id": "hidalgo_anemoi__08",
+      "case_id": "hidalgo_anemoi",
+      "date": "2023-05-01",
+      "mechanism": "construction_milestone",
+      "jurisdiction": "developer",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Commenced construction of 200 MW / 400 MWh battery energy storage system"
+    },
+    {
+      "id": "hidalgo_anemoi__09",
+      "case_id": "hidalgo_anemoi",
+      "date": "2023-07-06",
+      "mechanism": "commercial_milestone",
+      "jurisdiction": "federal_agency",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Published draft Board Document BD 2023-XX certification and financing proposal for Anemoi project; explicitly states \"No public opposition to the Project has been detected\""
+    },
+    {
+      "id": "hidalgo_anemoi__10",
+      "case_id": "hidalgo_anemoi",
+      "date": "2023-08-02",
+      "mechanism": "permit_issuance",
+      "jurisdiction": "federal_agency",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Filed self-certification of Exempt Wholesale Generator (EWG) status with FERC for the 200 MW battery storage facility under development in Edinburg, Texas"
+    },
+    {
+      "id": "hidalgo_anemoi__11",
+      "case_id": "hidalgo_anemoi",
+      "date": "2023-10-01",
+      "mechanism": "commercial_milestone",
+      "jurisdiction": "federal_agency",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "NADBank announced participation in $202.3 million project financing for Anemoi Energy Storage"
+    },
+    {
+      "id": "hidalgo_anemoi__12",
+      "case_id": "hidalgo_anemoi",
+      "date": "2023-12-01",
+      "mechanism": "tax_abatement_agreement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Unanimously approved 5-year, 50% Tax Abatement Agreement with Anemoi Energy ($190M project value); approved without significant public input or opposition"
+    },
+    {
+      "id": "hidalgo_anemoi__13",
+      "case_id": "hidalgo_anemoi",
+      "date": "2024-05-01",
+      "mechanism": "commercial_operation",
+      "jurisdiction": "state_agency",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Anemoi Energy Storage achieved Commercial Operation Date (200 MW / 400 MWh, 2-hour duration); Plus Power reports cleared for operation in June 2024"
+    },
+    {
+      "id": "hidalgo_anemoi__14",
+      "case_id": "hidalgo_anemoi",
+      "date": "2024-05-07",
+      "mechanism": "interconnection_agreement",
+      "jurisdiction": "state_agency",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": false,
+      "description": "Informational filing of executed ERCOT Interconnection Agreement with PUCT (Project No. 35077, Item 1810)"
+    },
+    {
+      "id": "hidalgo_kiskadee__00",
+      "case_id": "hidalgo_kiskadee",
+      "date": "2023-01-01",
+      "mechanism": "interconnection_agreement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "project_announcement",
+      "outcome": "clean",
+      "is_held_out_early": true,
+      "description": "Submitted ERCOT generation interconnection request (queue ID ERCOT-23INR0166) for 103.05 MW battery storage project in Hidalgo County, TX"
+    },
+    {
+      "id": "hidalgo_kiskadee__01",
+      "case_id": "hidalgo_kiskadee",
+      "date": "2024-01-01",
+      "mechanism": "commercial_milestone",
+      "jurisdiction": "developer",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": true,
+      "description": "Established SA Grid Solutions joint venture; Great Kiskadee Storage assigned as first project owned under JV"
+    },
+    {
+      "id": "hidalgo_kiskadee__02",
+      "case_id": "hidalgo_kiskadee",
+      "date": "2024-01-01",
+      "mechanism": "permit_issuance",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "first_public_action",
+      "outcome": "clean",
+      "is_held_out_early": true,
+      "description": "Construction continued in Hidalgo County under previously-secured permits; project initially anticipated COD Q3 2024 (per Apex financing announcement)"
+    },
+    {
+      "id": "kendall_flat_rock__00",
+      "case_id": "kendall_flat_rock",
+      "date": "2023-01-01",
+      "mechanism": "project_announcement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "project_announcement",
+      "outcome": "withdrawn",
+      "is_held_out_early": false,
+      "description": "Equinor subsidiary East Point Energy began developing the 250 MW Flat Rock Energy Center on 10 acres at Flat Rock Creek Road, Comfort, Kendall County, TX (adjacent to LCRA substation)"
+    },
+    {
+      "id": "kendall_flat_rock__01",
+      "case_id": "kendall_flat_rock",
+      "date": "2024-01-01",
+      "mechanism": "public_action",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "first_public_action",
+      "outcome": "withdrawn",
+      "is_held_out_early": false,
+      "description": "More than 275 residents crowded into Comfort Middle School to voice opposition to East Point's Flat Rock Energy Center and Key Capture Energy's adjacent Ringtrail Ridge BESS (3-acre site on 8-acre pla"
+    },
+    {
+      "id": "kendall_flat_rock__02",
+      "case_id": "kendall_flat_rock",
+      "date": "2024-01-01",
+      "mechanism": "fire_code_enforcement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "first_regulatory_action",
+      "outcome": "withdrawn",
+      "is_held_out_early": false,
+      "description": "Adopted 2024 International Fire Code and implemented restrictive design measures applicable to BESS facilities; effectively raised compliance burden for proposed projects"
+    },
+    {
+      "id": "kendall_flat_rock__03",
+      "case_id": "kendall_flat_rock",
+      "date": "2024-01-01",
+      "mechanism": "commissioner_resolution",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "withdrawn",
+      "is_held_out_early": false,
+      "description": "Kendall County Commissioners Court voted to move toward establishment of a Sub-Regional Planning Commission (\"391 Commission\") with Kerr County to strengthen joint opposition to BESS development under"
+    },
+    {
+      "id": "kendall_flat_rock__04",
+      "case_id": "kendall_flat_rock",
+      "date": "2024-05-01",
+      "mechanism": "fire_code_enforcement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "withdrawn",
+      "is_held_out_early": false,
+      "description": "Began strengthening Kendall County safety standards for BESS facilities; consulted with nationally-recognized fire/life-safety expert; implemented protective design requirements"
+    },
+    {
+      "id": "kendall_flat_rock__05",
+      "case_id": "kendall_flat_rock",
+      "date": "2025-01-01",
+      "mechanism": "legislative_action",
+      "jurisdiction": "state_agency",
+      "seq_pos": "legislative_response",
+      "outcome": "withdrawn",
+      "is_held_out_early": false,
+      "description": "Filed multiple Texas state bills (HB 5569, HB 5572, HB 1378, SB 819) to give counties authority to regulate BESS facilities, require fire safety standards, and impose setback rules \u2014 explicitly motiva"
+    },
+    {
+      "id": "kendall_flat_rock__06",
+      "case_id": "kendall_flat_rock",
+      "date": "2026-01-27",
+      "mechanism": "project_announcement",
+      "jurisdiction": "developer",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "withdrawn",
+      "is_held_out_early": false,
+      "description": "Issued letter formally cancelling the Flat Rock Energy Center: \"Due to shifting strategic priorities, East Point Energy's development of the Flat Rock Energy Center will no longer be pursued at this t"
+    },
+    {
+      "id": "kendall_flat_rock__07",
+      "case_id": "kendall_flat_rock",
+      "date": "2026-01-27",
+      "mechanism": "legislative_action",
+      "jurisdiction": "state_agency",
+      "seq_pos": "legislative_response",
+      "outcome": "withdrawn",
+      "is_held_out_early": false,
+      "description": "Publicly declared victory: \"East Point is officially calling off their plans for a battery storage facility\" \u2014 framed cancellation as a major victory after fierce local opposition"
+    },
+    {
+      "id": "fannin_platinum__00",
+      "case_id": "fannin_platinum",
+      "date": "2022-01-01",
+      "mechanism": "commercial_milestone",
+      "jurisdiction": "developer",
+      "seq_pos": "project_announcement",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Engie acquired Platinum BESS project as part of 6GW Texas portfolio purchased from Belltown Power; project sited near Savoy, TX on US Highway 82 (~17 acre site)"
+    },
+    {
+      "id": "fannin_platinum__01",
+      "case_id": "fannin_platinum",
+      "date": "2025-03-05",
+      "mechanism": "public_action",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "first_public_action",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Residents voiced concerns about Fannin County energy facility at public meeting; cited noise, sound, air pollution, and inadequate firefighting capacity for 17-acre lithium battery site"
+    },
+    {
+      "id": "fannin_platinum__02",
+      "case_id": "fannin_platinum",
+      "date": "2025-03-24",
+      "mechanism": "legislative_action",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "first_regulatory_action",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Texas state leaders publicly advocated for Fannin County residents opposing the new battery facility; pressed Engie for compliance and additional safety measures"
+    },
+    {
+      "id": "fannin_platinum__03",
+      "case_id": "fannin_platinum",
+      "date": "2025-05-20",
+      "mechanism": "fire_code_enforcement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Fannin County Judge called for inspection of the BESS facility before it could become operational; walkthrough scheduled with Engie Services US for May 20, 2025 to ensure NFPA / fire code compliance p"
+    },
+    {
+      "id": "fannin_platinum__04",
+      "case_id": "fannin_platinum",
+      "date": "2025-09-01",
+      "mechanism": "health_safety_litigation",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "court_response_to_agency",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Filed lawsuit against Fannin County in district court alleging county officials \"moved the goalposts at every turn\" and obstructed the project's right to do business; Platinum BESS separately filed la"
+    },
+    {
+      "id": "fannin_platinum__05",
+      "case_id": "fannin_platinum",
+      "date": "2025-11-26",
+      "mechanism": "public_action",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Residents again voiced opposition to BESS plant at public meeting; expressed dismay that Engie was nearing completion of 300MW standalone BESS despite four years of development without their awareness"
+    },
+    {
+      "id": "kerr_black_mountain__00",
+      "case_id": "kerr_black_mountain",
+      "date": "2024-07-26",
+      "mechanism": "commissioner_resolution",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "project_announcement",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Rejected Black Mountain Energy Storage's request for property tax abatement on $87 million BESS project at Reservation Rd / IH-10 adjacent to Mountain Home substation; eight speakers spoke against the"
+    },
+    {
+      "id": "kerr_black_mountain__01",
+      "case_id": "kerr_black_mountain",
+      "date": "2024-08-26",
+      "mechanism": "commissioner_resolution",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Signed two formal resolutions opposing BESS in Kerr County: one to be sent to the Texas Commission on Environmental Quality (TCEQ, the BESS-permitting agency); one to be sent to State Rep-elect Wes Vi"
+    },
+    {
+      "id": "kerr_black_mountain__02",
+      "case_id": "kerr_black_mountain",
+      "date": "2024-09-11",
+      "mechanism": "legislative_action",
+      "jurisdiction": "federal_agency",
+      "seq_pos": "legislative_response",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Sent letter to Black Mountain Energy Storage CEO Rhett Bennett pressing for answers regarding the proposed Mountain Home BESS facility"
+    },
+    {
+      "id": "kerr_black_mountain__03",
+      "case_id": "kerr_black_mountain",
+      "date": "2024-11-19",
+      "mechanism": "commissioner_resolution",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Held workshop on forming a Chapter 391 Sub-Regional Planning Commission with Kendall County to formally oppose BESS development across both counties; commissioners unanimously agreed to share the prop"
+    },
+    {
+      "id": "kerr_black_mountain__04",
+      "case_id": "kerr_black_mountain",
+      "date": "2025-02-01",
+      "mechanism": "interconnection_agreement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "ERCOT generation interconnection request entered queue (ERCOT-25INR0210) for 100.8 MW BESS at \"7750 LCRA MOUNTAIN HOME SUB\" in Kerr County (queue date 02-01-2025)"
+    },
+    {
+      "id": "kerr_black_mountain__05",
+      "case_id": "kerr_black_mountain",
+      "date": "2025-07-01",
+      "mechanism": "commissioner_resolution",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Approved hire of contracted (part-time) fire marshal and adopted a new legally vetted resolution requiring BESS developers to prove compliance with state safety and fire codes before receiving court a"
+    },
+    {
+      "id": "kerr_black_mountain__06",
+      "case_id": "kerr_black_mountain",
+      "date": "2025-12-09",
+      "mechanism": "commissioner_resolution",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Told Lower Colorado River Authority Board of Directors that the 391 SRPC had submitted four coordination notices asking LCRA to consult on proposed BESS sites and that LCRA had refused to meet; called"
+    },
+    {
+      "id": "hood_apache_hill__00",
+      "case_id": "hood_apache_hill",
+      "date": "2024-01-01",
+      "mechanism": "commercial_milestone",
+      "jurisdiction": "developer",
+      "seq_pos": "project_announcement",
+      "outcome": "under_construction",
+      "is_held_out_early": false,
+      "description": "Black Mountain Energy Storage sold the 200 MW Apache Hill BESS project to woman-owned IPP Vitis Energy"
+    },
+    {
+      "id": "van_zandt__02",
+      "case_id": "van_zandt",
+      "date": "2024-12-10",
+      "mechanism": "court_injunction",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "first_regulatory_action",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Filed lawsuit (Cause No. 24-00204) seeking damages, temporary and permanent injunction against BT Amador Storage LLC, Maria Amador, Jose Valedelmar Amador, RES Group LLC, Belltown Power Texas Land 2 L"
+    },
+    {
+      "id": "van_zandt__03",
+      "case_id": "van_zandt",
+      "date": "2025-02-20",
+      "mechanism": "public_action",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Public meeting held where residents voiced safety concerns including risk of fire and environmental damage from lithium battery explosion"
+    },
+    {
+      "id": "van_zandt__04",
+      "case_id": "van_zandt",
+      "date": "2025-03-21",
+      "mechanism": "fire_code_enforcement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Issued order to Taaleri Energia to conform to all applicable NFPA standards per Texas Local Government Code Chapter 233 and NFPA 855 (2020 ed). Required: permit application, UL container test results,"
+    },
+    {
+      "id": "van_zandt__05",
+      "case_id": "van_zandt",
+      "date": "2025-04-09",
+      "mechanism": "court_injunction",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "court_response_to_agency",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "DA presented ex parte petition for Temporary Restraining Order. Judge Martin signed TRO (Cause No. 25-00067) against Taaleri Energia North America LLC, BT Amador Storage LLC, Amador BESS Holdings Inc."
+    },
+    {
+      "id": "van_zandt__06",
+      "case_id": "van_zandt",
+      "date": "2025-06-21",
+      "mechanism": "court_injunction",
+      "jurisdiction": "district_court",
+      "seq_pos": "court_response_to_agency",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Court hearing scheduled for July 24, 2025 to determine whether TRO will be extended or batteries allowed in"
+    },
+    {
+      "id": "van_zandt__07",
+      "case_id": "van_zandt",
+      "date": "2025-09-05",
+      "mechanism": "court_injunction",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "court_response_to_agency",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Confirmed TRO still in effect. No compliant safety test results received from developer. Groundwork continues but no batteries permitted in county"
+    },
+    {
+      "id": "hood_apache_hill__01",
+      "case_id": "hood_apache_hill",
+      "date": "2025-01-01",
+      "mechanism": "construction_milestone",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "first_public_action",
+      "outcome": "under_construction",
+      "is_held_out_early": false,
+      "description": "Vitis Energy and Enertis Applus+ advanced Apache Hill BESS through engineering, procurement, and construction milestones for the 200 MW / 400 MWh project at 2625 Mambrino Hwy, Hood County, TX"
+    },
+    {
+      "id": "hood_apache_hill__02",
+      "case_id": "hood_apache_hill",
+      "date": "2026-01-01",
+      "mechanism": "commercial_milestone",
+      "jurisdiction": "developer",
+      "seq_pos": "first_public_action",
+      "outcome": "under_construction",
+      "is_held_out_early": false,
+      "description": "Vitis Energy announced financial close of Apache Hill (200 MW / 400 MWh); commercial operations targeted for July 2026"
+    },
+    {
+      "id": "hood_apache_hill__03",
+      "case_id": "hood_apache_hill",
+      "date": "2026-04-22",
+      "mechanism": "fire_code_enforcement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "first_regulatory_action",
+      "outcome": "under_construction",
+      "is_held_out_early": false,
+      "description": "Residents urged Hood County Commissioners Court to grant the Hood County Fire Marshal \"every tool he needs to inspect these\" battery storage facilities; cited proximity to Rainbow's Promise childcare "
+    },
+    {
+      "id": "van_zandt__08",
+      "case_id": "van_zandt",
+      "date": "2026-01-16",
+      "mechanism": "fire_code_enforcement",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Press release announcing Van Zandt County Fire Marshal's rejection of Amador BESS documents; letter excerpts state that submitted materials do not satisfy NFPA 855 (2020 ed) and Texas Local Government"
+    },
+    {
+      "id": "van_zandt__09",
+      "case_id": "van_zandt",
+      "date": "2026-02-11",
+      "mechanism": "health_safety_litigation",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "court_response_to_agency",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Unanimously adopted temporary moratorium freezing all proposed green energy developments (solar farms, wind installations, BESS) in unincorporated areas. Passed after hours of public testimony"
+    },
+    {
+      "id": "van_zandt__10",
+      "case_id": "van_zandt",
+      "date": "2026-02-24",
+      "mechanism": "permit_denial_appeal",
+      "jurisdiction": "county_commissioner",
+      "seq_pos": "escalation_same_jurisdiction",
+      "outcome": "escalation",
+      "is_held_out_early": false,
+      "description": "Delta County filed Request for Attorney General Opinion (RQ-0634-KP) asking whether Texas counties have express statutory or constitutional authority to impose moratoria on commercial utility-scale so"
+    }
+  ],
+  "edges": [
+    {
+      "source": "van_zandt__02",
+      "target": "gillespie_rogers__00",
+      "weight": 0.5256
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "gillespie_rogers__00",
+      "weight": 0.5539
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "gillespie_rogers__00",
+      "weight": 0.7
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "van_zandt__01",
+      "weight": 0.8539
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "gillespie_rogers__01",
+      "weight": 0.8513
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "gillespie_rogers__01",
+      "weight": 0.5171
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "gillespie_rogers__01",
+      "weight": 0.5035
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "gillespie_rogers__01",
+      "weight": 0.5269
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "gillespie_rogers__01",
+      "weight": 0.581
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "gillespie_rogers__01",
+      "weight": 0.6035
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "gillespie_rogers__01",
+      "weight": 0.6655
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "gillespie_rogers__01",
+      "weight": 0.5513
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "gillespie_rogers__02",
+      "weight": 0.5904
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "gillespie_rogers__02",
+      "weight": 0.5196
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "gillespie_rogers__02",
+      "weight": 0.5124
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "gillespie_rogers__02",
+      "weight": 0.8156
+    },
+    {
+      "source": "van_zandt__06",
+      "target": "gillespie_rogers__02",
+      "weight": 0.5549
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "gillespie_rogers__02",
+      "weight": 0.8606
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "gillespie_rogers__02",
+      "weight": 0.6084
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "gillespie_rogers__02",
+      "weight": 0.6281
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "gillespie_rogers__02",
+      "weight": 0.9806
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "gillespie_rogers__02",
+      "weight": 0.5725
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "gillespie_rogers__02",
+      "weight": 0.5196
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "gillespie_rogers__03",
+      "weight": 0.6086
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "gillespie_rogers__03",
+      "weight": 0.5747
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "gillespie_rogers__03",
+      "weight": 0.7928
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "gillespie_rogers__03",
+      "weight": 0.5278
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "gillespie_rogers__03",
+      "weight": 0.5628
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "gillespie_rogers__03",
+      "weight": 0.5694
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "gillespie_rogers__03",
+      "weight": 0.6232
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "gillespie_rogers__03",
+      "weight": 0.6747
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "gillespie_rogers__03",
+      "weight": 0.6039
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "gillespie_rogers__03",
+      "weight": 0.5513
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "gillespie_rogers__04",
+      "weight": 0.5831
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "gillespie_rogers__04",
+      "weight": 0.5636
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "gillespie_rogers__04",
+      "weight": 0.5023
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "gillespie_rogers__04",
+      "weight": 0.5378
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "gillespie_rogers__04",
+      "weight": 0.5217
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "gillespie_rogers__04",
+      "weight": 0.5001
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "gillespie_rogers__04",
+      "weight": 0.5343
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "gillespie_rogers__04",
+      "weight": 0.652
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "gillespie_rogers__04",
+      "weight": 0.642
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "gillespie_rogers__04",
+      "weight": 0.8722
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "gillespie_rogers__04",
+      "weight": 0.5531
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "gillespie_rogers__05",
+      "weight": 0.5825
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "gillespie_rogers__05",
+      "weight": 0.5183
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "gillespie_rogers__05",
+      "weight": 0.7975
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "gillespie_rogers__05",
+      "weight": 0.5085
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "gillespie_rogers__05",
+      "weight": 0.5083
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "gillespie_rogers__05",
+      "weight": 0.8459
+    },
+    {
+      "source": "van_zandt__06",
+      "target": "gillespie_rogers__05",
+      "weight": 0.6129
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "gillespie_rogers__05",
+      "weight": 0.9017
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "gillespie_rogers__05",
+      "weight": 0.5517
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "gillespie_rogers__05",
+      "weight": 0.5096
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "gillespie_rogers__05",
+      "weight": 0.7912
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "gillespie_rogers__05",
+      "weight": 0.5085
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "gillespie_rogers__06",
+      "weight": 0.5226
+    },
+    {
+      "source": "van_zandt__06",
+      "target": "gillespie_rogers__06",
+      "weight": 0.5755
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "gillespie_rogers__07",
+      "weight": 0.5474
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "gillespie_rogers__07",
+      "weight": 0.5613
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "gillespie_rogers__07",
+      "weight": 0.7876
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "gillespie_rogers__07",
+      "weight": 0.5904
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "gillespie_rogers__07",
+      "weight": 0.9006
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "gillespie_rogers__07",
+      "weight": 0.6145
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "gillespie_rogers__07",
+      "weight": 0.5947
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "gillespie_rogers__07",
+      "weight": 0.5595
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "gillespie_rogers__07",
+      "weight": 0.5231
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "gillespie_rogers__08",
+      "weight": 0.9123
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "gillespie_rogers__08",
+      "weight": 0.5044
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "gillespie_rogers__08",
+      "weight": 0.5314
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "gillespie_rogers__08",
+      "weight": 0.7884
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "gillespie_rogers__08",
+      "weight": 0.5045
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "gillespie_rogers__08",
+      "weight": 0.622
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "gillespie_rogers__08",
+      "weight": 0.9833
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "gillespie_rogers__08",
+      "weight": 0.5929
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "gillespie_rogers__08",
+      "weight": 0.566
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "gillespie_rogers__08",
+      "weight": 0.5574
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "gillespie_rogers__08",
+      "weight": 0.5312
+    },
+    {
+      "source": "gillespie_rogers__06",
+      "target": "gillespie_rogers__09",
+      "weight": 0.5443
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "gillespie_rogers__09",
+      "weight": 0.574
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "gillespie_rogers__09",
+      "weight": 0.5188
+    },
+    {
+      "source": "van_zandt__06",
+      "target": "gillespie_rogers__09",
+      "weight": 0.7768
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "katy_ochoa__01",
+      "weight": 0.5076
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "katy_ochoa__01",
+      "weight": 0.546
+    },
+    {
+      "source": "katy_ochoa__00",
+      "target": "katy_ochoa__02",
+      "weight": 0.8492
+    },
+    {
+      "source": "katy_ochoa__02",
+      "target": "katy_ochoa__03",
+      "weight": 0.9037
+    },
+    {
+      "source": "katy_ochoa__00",
+      "target": "katy_ochoa__03",
+      "weight": 0.8054
+    },
+    {
+      "source": "katy_ochoa__03",
+      "target": "katy_ochoa__04",
+      "weight": 0.6065
+    },
+    {
+      "source": "katy_ochoa__02",
+      "target": "katy_ochoa__04",
+      "weight": 0.6108
+    },
+    {
+      "source": "katy_ochoa__01",
+      "target": "katy_ochoa__04",
+      "weight": 0.5663
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "katy_ochoa__04",
+      "weight": 0.666
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "katy_ochoa__04",
+      "weight": 0.6238
+    },
+    {
+      "source": "katy_ochoa__04",
+      "target": "katy_ochoa__05",
+      "weight": 0.5689
+    },
+    {
+      "source": "katy_ochoa__03",
+      "target": "katy_ochoa__05",
+      "weight": 0.5466
+    },
+    {
+      "source": "katy_ochoa__02",
+      "target": "katy_ochoa__05",
+      "weight": 0.504
+    },
+    {
+      "source": "katy_ochoa__05",
+      "target": "katy_ochoa__06",
+      "weight": 0.8697
+    },
+    {
+      "source": "katy_ochoa__04",
+      "target": "katy_ochoa__06",
+      "weight": 0.6113
+    },
+    {
+      "source": "katy_ochoa__03",
+      "target": "katy_ochoa__06",
+      "weight": 0.5451
+    },
+    {
+      "source": "katy_ochoa__02",
+      "target": "katy_ochoa__06",
+      "weight": 0.5576
+    },
+    {
+      "source": "gillespie_rogers__06",
+      "target": "katy_ochoa__06",
+      "weight": 0.5428
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "katy_ochoa__06",
+      "weight": 0.5644
+    },
+    {
+      "source": "katy_ochoa__06",
+      "target": "katy_ochoa__07",
+      "weight": 0.5574
+    },
+    {
+      "source": "gillespie_rogers__06",
+      "target": "katy_ochoa__07",
+      "weight": 0.6222
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "katy_ochoa__07",
+      "weight": 0.5066
+    },
+    {
+      "source": "katy_ochoa__07",
+      "target": "katy_ochoa__08",
+      "weight": 0.5574
+    },
+    {
+      "source": "katy_ochoa__06",
+      "target": "katy_ochoa__08",
+      "weight": 0.9159
+    },
+    {
+      "source": "katy_ochoa__05",
+      "target": "katy_ochoa__08",
+      "weight": 0.8057
+    },
+    {
+      "source": "katy_ochoa__04",
+      "target": "katy_ochoa__08",
+      "weight": 0.5625
+    },
+    {
+      "source": "katy_ochoa__03",
+      "target": "katy_ochoa__08",
+      "weight": 0.508
+    },
+    {
+      "source": "katy_ochoa__02",
+      "target": "katy_ochoa__08",
+      "weight": 0.5294
+    },
+    {
+      "source": "gillespie_rogers__06",
+      "target": "katy_ochoa__08",
+      "weight": 0.5705
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "katy_ochoa__08",
+      "weight": 0.6015
+    },
+    {
+      "source": "katy_ochoa__08",
+      "target": "katy_ochoa__09",
+      "weight": 0.571
+    },
+    {
+      "source": "katy_ochoa__07",
+      "target": "katy_ochoa__09",
+      "weight": 0.8976
+    },
+    {
+      "source": "katy_ochoa__06",
+      "target": "katy_ochoa__09",
+      "weight": 0.507
+    },
+    {
+      "source": "gillespie_rogers__06",
+      "target": "katy_ochoa__09",
+      "weight": 0.5706
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "katy_ochoa__09",
+      "weight": 0.5701
+    },
+    {
+      "source": "katy_ochoa__09",
+      "target": "katy_ochoa__10",
+      "weight": 0.9082
+    },
+    {
+      "source": "katy_ochoa__08",
+      "target": "katy_ochoa__10",
+      "weight": 0.502
+    },
+    {
+      "source": "katy_ochoa__07",
+      "target": "katy_ochoa__10",
+      "weight": 0.8567
+    },
+    {
+      "source": "gillespie_rogers__06",
+      "target": "katy_ochoa__10",
+      "weight": 0.5305
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "katy_ochoa__10",
+      "weight": 0.5709
+    },
+    {
+      "source": "katy_ochoa__10",
+      "target": "katy_ochoa__11",
+      "weight": 0.5739
+    },
+    {
+      "source": "katy_ochoa__09",
+      "target": "katy_ochoa__11",
+      "weight": 0.5331
+    },
+    {
+      "source": "katy_ochoa__08",
+      "target": "katy_ochoa__11",
+      "weight": 0.842
+    },
+    {
+      "source": "katy_ochoa__07",
+      "target": "katy_ochoa__11",
+      "weight": 0.5007
+    },
+    {
+      "source": "katy_ochoa__06",
+      "target": "katy_ochoa__11",
+      "weight": 0.8049
+    },
+    {
+      "source": "katy_ochoa__05",
+      "target": "katy_ochoa__11",
+      "weight": 0.7713
+    },
+    {
+      "source": "katy_ochoa__03",
+      "target": "katy_ochoa__11",
+      "weight": 0.5172
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "katy_ochoa__11",
+      "weight": 0.6798
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "gillespie_marshall__00",
+      "weight": 0.5085
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "gillespie_marshall__00",
+      "weight": 0.5196
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "gillespie_marshall__00",
+      "weight": 0.5513
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "gillespie_marshall__00",
+      "weight": 0.7
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "gillespie_marshall__00",
+      "weight": 0.5256
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "gillespie_marshall__00",
+      "weight": 0.5539
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "gillespie_marshall__00",
+      "weight": 0.7
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "gillespie_marshall__01",
+      "weight": 0.5502
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "gillespie_marshall__01",
+      "weight": 0.5649
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "gillespie_marshall__01",
+      "weight": 0.5839
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "gillespie_marshall__01",
+      "weight": 0.6863
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "gillespie_marshall__01",
+      "weight": 0.5502
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "gillespie_marshall__01",
+      "weight": 0.8045
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "gillespie_marshall__01",
+      "weight": 0.8211
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "gillespie_marshall__01",
+      "weight": 0.5718
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "gillespie_marshall__01",
+      "weight": 0.5966
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "gillespie_marshall__01",
+      "weight": 0.677
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "gillespie_marshall__01",
+      "weight": 0.5502
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "gillespie_marshall__03",
+      "weight": 0.5124
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "gillespie_marshall__03",
+      "weight": 0.5443
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "gillespie_marshall__03",
+      "weight": 0.6027
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "gillespie_marshall__03",
+      "weight": 0.5825
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "gillespie_marshall__03",
+      "weight": 0.6156
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "gillespie_marshall__03",
+      "weight": 0.5672
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "gillespie_marshall__03",
+      "weight": 0.8139
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "gillespie_marshall__03",
+      "weight": 0.8443
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "gillespie_marshall__03",
+      "weight": 0.5538
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "gillespie_marshall__03",
+      "weight": 0.59
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "gillespie_marshall__03",
+      "weight": 0.5976
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "gillespie_marshall__03",
+      "weight": 0.5564
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "gillespie_marshall__03",
+      "weight": 0.5074
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "gillespie_marshall__03",
+      "weight": 0.5443
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "gillespie_marshall__04",
+      "weight": 0.57
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "gillespie_marshall__04",
+      "weight": 0.8099
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "gillespie_marshall__04",
+      "weight": 0.5393
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "gillespie_marshall__04",
+      "weight": 0.5333
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "gillespie_marshall__04",
+      "weight": 0.57
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "gillespie_marshall__04",
+      "weight": 0.6681
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "gillespie_marshall__04",
+      "weight": 0.6017
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "gillespie_marshall__04",
+      "weight": 0.5921
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "gillespie_marshall__04",
+      "weight": 0.5157
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "gillespie_marshall__04",
+      "weight": 0.5059
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "gillespie_marshall__04",
+      "weight": 0.5474
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "gillespie_marshall__04",
+      "weight": 0.8147
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "gillespie_marshall__04",
+      "weight": 0.5536
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "gillespie_marshall__04",
+      "weight": 0.6517
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "gillespie_marshall__04",
+      "weight": 0.9733
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "gillespie_marshall__04",
+      "weight": 0.592
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "gillespie_marshall__04",
+      "weight": 0.5797
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "gillespie_marshall__04",
+      "weight": 0.5015
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "gillespie_marshall__05",
+      "weight": 0.5622
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "gillespie_marshall__05",
+      "weight": 0.5734
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "gillespie_marshall__05",
+      "weight": 0.5378
+    },
+    {
+      "source": "katy_ochoa__04",
+      "target": "gillespie_marshall__05",
+      "weight": 0.5654
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "gillespie_marshall__05",
+      "weight": 0.5343
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "gillespie_marshall__05",
+      "weight": 0.6707
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "gillespie_marshall__05",
+      "weight": 0.871
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "gillespie_marshall__05",
+      "weight": 0.5137
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "gillespie_marshall__05",
+      "weight": 0.5378
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "gillespie_marshall__05",
+      "weight": 0.5047
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "gillespie_marshall__05",
+      "weight": 0.5411
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "gillespie_marshall__05",
+      "weight": 0.5922
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "gillespie_marshall__05",
+      "weight": 0.544
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "gillespie_marshall__05",
+      "weight": 0.8047
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "gillespie_marshall__05",
+      "weight": 0.5378
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "gillespie_marshall__06",
+      "weight": 0.8787
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "gillespie_marshall__06",
+      "weight": 0.5561
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "gillespie_marshall__06",
+      "weight": 0.5236
+    },
+    {
+      "source": "katy_ochoa__04",
+      "target": "gillespie_marshall__06",
+      "weight": 0.5913
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "gillespie_marshall__06",
+      "weight": 0.5644
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "gillespie_marshall__06",
+      "weight": 0.6327
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "gillespie_marshall__06",
+      "weight": 0.5933
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "gillespie_marshall__06",
+      "weight": 0.8811
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "gillespie_marshall__06",
+      "weight": 0.5048
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "gillespie_marshall__06",
+      "weight": 0.5005
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "gillespie_marshall__06",
+      "weight": 0.552
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "gillespie_marshall__06",
+      "weight": 0.5548
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "gillespie_marshall__06",
+      "weight": 0.5586
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "gillespie_marshall__06",
+      "weight": 0.6134
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "gillespie_marshall__06",
+      "weight": 0.5862
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "gillespie_marshall__06",
+      "weight": 0.5424
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "gillespie_marshall__06",
+      "weight": 0.7999
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "gillespie_marshall__07",
+      "weight": 0.5833
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "gillespie_marshall__07",
+      "weight": 0.5168
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "gillespie_marshall__07",
+      "weight": 0.5484
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "gillespie_marshall__07",
+      "weight": 0.7335
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "gillespie_marshall__07",
+      "weight": 0.6081
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "gillespie_marshall__07",
+      "weight": 0.6447
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "gillespie_marshall__07",
+      "weight": 0.5227
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "gillespie_marshall__07",
+      "weight": 0.5246
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "gillespie_marshall__07",
+      "weight": 0.5308
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "gillespie_marshall__07",
+      "weight": 0.5214
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "gillespie_marshall__07",
+      "weight": 0.5537
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "gillespie_marshall__07",
+      "weight": 0.6107
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "gillespie_marshall__07",
+      "weight": 0.6484
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "gillespie_marshall__07",
+      "weight": 0.6395
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "gillespie_marshall__07",
+      "weight": 0.5486
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "gillespie_marshall__07",
+      "weight": 0.5405
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "gillespie_marshall__07",
+      "weight": 0.531
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "gillespie_marshall__07",
+      "weight": 0.5248
+    },
+    {
+      "source": "gillespie_marshall__02",
+      "target": "gillespie_marshall__08",
+      "weight": 0.7566
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "gillespie_marshall__09",
+      "weight": 0.5851
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "gillespie_marshall__09",
+      "weight": 0.5221
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "gillespie_marshall__09",
+      "weight": 0.5285
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "gillespie_marshall__09",
+      "weight": 0.9219
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "gillespie_marshall__09",
+      "weight": 0.8569
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "gillespie_marshall__09",
+      "weight": 0.7915
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "gillespie_marshall__09",
+      "weight": 0.518
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "gillespie_marshall__09",
+      "weight": 0.6618
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "gillespie_marshall__09",
+      "weight": 0.9356
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "gillespie_marshall__09",
+      "weight": 0.5603
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "gillespie_marshall__09",
+      "weight": 0.5482
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "gillespie_marshall__09",
+      "weight": 0.5194
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "gillespie_marshall__09",
+      "weight": 0.5254
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "gillespie_marshall__09",
+      "weight": 0.5103
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "hill_sun_valley__00",
+      "weight": 0.7335
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "hill_sun_valley__00",
+      "weight": 0.5378
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "hill_sun_valley__00",
+      "weight": 0.5443
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "hill_sun_valley__00",
+      "weight": 0.5502
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "hill_sun_valley__00",
+      "weight": 1.0
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "hill_sun_valley__00",
+      "weight": 0.5085
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "hill_sun_valley__00",
+      "weight": 0.5196
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "hill_sun_valley__00",
+      "weight": 0.5513
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "hill_sun_valley__00",
+      "weight": 0.7
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "hill_sun_valley__00",
+      "weight": 0.5256
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "hill_sun_valley__00",
+      "weight": 0.5539
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "hill_sun_valley__00",
+      "weight": 0.7
+    },
+    {
+      "source": "hill_sun_valley__00",
+      "target": "hill_sun_valley__01",
+      "weight": 0.5205
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "hill_sun_valley__01",
+      "weight": 0.5205
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "hill_sun_valley__03",
+      "weight": 0.5072
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "hill_sun_valley__03",
+      "weight": 0.5674
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "hill_sun_valley__03",
+      "weight": 0.6064
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "hill_sun_valley__03",
+      "weight": 0.5691
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "hill_sun_valley__03",
+      "weight": 0.5091
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "hill_sun_valley__03",
+      "weight": 0.5597
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "hill_sun_valley__03",
+      "weight": 0.6413
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "hill_sun_valley__03",
+      "weight": 0.5703
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "hill_sun_valley__03",
+      "weight": 0.56
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "hill_sun_valley__03",
+      "weight": 0.5019
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "hill_sun_valley__03",
+      "weight": 0.5063
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "hill_sun_valley__03",
+      "weight": 0.5412
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "hill_sun_valley__03",
+      "weight": 0.5883
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "hill_sun_valley__03",
+      "weight": 0.6197
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "hill_sun_valley__03",
+      "weight": 0.5629
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "hill_sun_valley__03",
+      "weight": 0.5788
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "hill_sun_valley__04",
+      "weight": 0.8752
+    },
+    {
+      "source": "gillespie_marshall__09",
+      "target": "hill_sun_valley__04",
+      "weight": 0.5211
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "hill_sun_valley__04",
+      "weight": 0.5726
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "hill_sun_valley__04",
+      "weight": 0.5431
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "hill_sun_valley__04",
+      "weight": 0.5576
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "hill_sun_valley__04",
+      "weight": 0.6756
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "hill_sun_valley__04",
+      "weight": 0.5635
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "hill_sun_valley__04",
+      "weight": 0.5217
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "hill_sun_valley__04",
+      "weight": 0.5182
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "hill_sun_valley__04",
+      "weight": 0.5188
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "hill_sun_valley__04",
+      "weight": 0.5635
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "hill_sun_valley__04",
+      "weight": 0.6515
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "hill_sun_valley__04",
+      "weight": 0.6206
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "hill_sun_valley__04",
+      "weight": 0.5872
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "hill_sun_valley__04",
+      "weight": 0.5293
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "hill_sun_valley__04",
+      "weight": 0.5238
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "hill_sun_valley__04",
+      "weight": 0.5295
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "hill_sun_valley__04",
+      "weight": 0.5732
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "hill_sun_valley__04",
+      "weight": 0.6316
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "hill_sun_valley__04",
+      "weight": 0.652
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "hill_sun_valley__04",
+      "weight": 0.6122
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "hill_sun_valley__04",
+      "weight": 0.5864
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "hill_sun_valley__04",
+      "weight": 0.5113
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "hill_sun_valley__05",
+      "weight": 0.5811
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "hill_sun_valley__05",
+      "weight": 0.5147
+    },
+    {
+      "source": "hill_sun_valley__02",
+      "target": "hill_sun_valley__05",
+      "weight": 0.5084
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "hill_sun_valley__05",
+      "weight": 0.5401
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "hill_sun_valley__05",
+      "weight": 0.6368
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "hill_sun_valley__05",
+      "weight": 0.6378
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "hill_sun_valley__05",
+      "weight": 0.5933
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "hill_sun_valley__05",
+      "weight": 0.5561
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "hill_sun_valley__05",
+      "weight": 0.5313
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "hill_sun_valley__05",
+      "weight": 0.5863
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "hill_sun_valley__05",
+      "weight": 0.6535
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "hill_sun_valley__05",
+      "weight": 0.6167
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "hill_sun_valley__05",
+      "weight": 0.5319
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "hill_sun_valley__05",
+      "weight": 0.5183
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "hill_sun_valley__05",
+      "weight": 0.5261
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "hill_sun_valley__05",
+      "weight": 0.5231
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "hill_sun_valley__05",
+      "weight": 0.519
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "hill_sun_valley__05",
+      "weight": 0.56
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "hill_sun_valley__05",
+      "weight": 0.63
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "hill_sun_valley__05",
+      "weight": 0.5745
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "hill_sun_valley__05",
+      "weight": 0.5241
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "hill_sun_valley__05",
+      "weight": 0.5107
+    },
+    {
+      "source": "katy_ochoa__10",
+      "target": "hill_sun_valley__06",
+      "weight": 0.5777
+    },
+    {
+      "source": "katy_ochoa__09",
+      "target": "hill_sun_valley__06",
+      "weight": 0.596
+    },
+    {
+      "source": "katy_ochoa__07",
+      "target": "hill_sun_valley__06",
+      "weight": 0.6671
+    },
+    {
+      "source": "gillespie_marshall__08",
+      "target": "hill_sun_valley__07",
+      "weight": 0.5645
+    },
+    {
+      "source": "gillespie_marshall__02",
+      "target": "hill_sun_valley__07",
+      "weight": 0.5097
+    },
+    {
+      "source": "hill_sun_valley__07",
+      "target": "hill_sun_valley__08",
+      "weight": 0.9073
+    },
+    {
+      "source": "gillespie_marshall__08",
+      "target": "hill_sun_valley__08",
+      "weight": 0.6331
+    },
+    {
+      "source": "gillespie_marshall__02",
+      "target": "hill_sun_valley__08",
+      "weight": 0.5161
+    },
+    {
+      "source": "hill_sun_valley__06",
+      "target": "hill_sun_valley__09",
+      "weight": 0.8245
+    },
+    {
+      "source": "katy_ochoa__10",
+      "target": "hill_sun_valley__09",
+      "weight": 0.6151
+    },
+    {
+      "source": "katy_ochoa__09",
+      "target": "hill_sun_valley__09",
+      "weight": 0.5511
+    },
+    {
+      "source": "katy_ochoa__07",
+      "target": "hill_sun_valley__09",
+      "weight": 0.5102
+    },
+    {
+      "source": "hill_sun_valley__00",
+      "target": "hidalgo_anemoi__00",
+      "weight": 0.7
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "hidalgo_anemoi__00",
+      "weight": 0.5378
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "hidalgo_anemoi__00",
+      "weight": 0.5443
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "hidalgo_anemoi__00",
+      "weight": 0.5502
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "hidalgo_anemoi__00",
+      "weight": 0.7
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "hidalgo_anemoi__00",
+      "weight": 0.5085
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "hidalgo_anemoi__00",
+      "weight": 0.5196
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "hidalgo_anemoi__00",
+      "weight": 0.5513
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "hidalgo_anemoi__00",
+      "weight": 0.7
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "hidalgo_anemoi__00",
+      "weight": 0.5256
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "hidalgo_anemoi__00",
+      "weight": 0.8539
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "hidalgo_anemoi__00",
+      "weight": 1.0
+    },
+    {
+      "source": "hill_sun_valley__01",
+      "target": "hidalgo_anemoi__01",
+      "weight": 0.9415
+    },
+    {
+      "source": "hill_sun_valley__00",
+      "target": "hidalgo_anemoi__01",
+      "weight": 0.5407
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "hidalgo_anemoi__01",
+      "weight": 0.5407
+    },
+    {
+      "source": "hidalgo_anemoi__01",
+      "target": "hidalgo_anemoi__02",
+      "weight": 0.9062
+    },
+    {
+      "source": "hill_sun_valley__06",
+      "target": "hidalgo_anemoi__02",
+      "weight": 0.5245
+    },
+    {
+      "source": "hill_sun_valley__01",
+      "target": "hidalgo_anemoi__02",
+      "weight": 0.9105
+    },
+    {
+      "source": "hill_sun_valley__00",
+      "target": "hidalgo_anemoi__02",
+      "weight": 0.5167
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "hidalgo_anemoi__02",
+      "weight": 0.5167
+    },
+    {
+      "source": "katy_ochoa__10",
+      "target": "hidalgo_anemoi__02",
+      "weight": 0.5177
+    },
+    {
+      "source": "katy_ochoa__07",
+      "target": "hidalgo_anemoi__02",
+      "weight": 0.5156
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "hidalgo_anemoi__03",
+      "weight": 0.5407
+    },
+    {
+      "source": "hill_sun_valley__02",
+      "target": "hidalgo_anemoi__03",
+      "weight": 0.9238
+    },
+    {
+      "source": "hidalgo_anemoi__03",
+      "target": "hidalgo_anemoi__04",
+      "weight": 0.8997
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "hidalgo_anemoi__04",
+      "weight": 0.5285
+    },
+    {
+      "source": "hill_sun_valley__02",
+      "target": "hidalgo_anemoi__04",
+      "weight": 0.9398
+    },
+    {
+      "source": "hidalgo_anemoi__02",
+      "target": "hidalgo_anemoi__05",
+      "weight": 0.5759
+    },
+    {
+      "source": "hidalgo_anemoi__01",
+      "target": "hidalgo_anemoi__05",
+      "weight": 0.5482
+    },
+    {
+      "source": "hill_sun_valley__09",
+      "target": "hidalgo_anemoi__05",
+      "weight": 0.5159
+    },
+    {
+      "source": "hill_sun_valley__08",
+      "target": "hidalgo_anemoi__05",
+      "weight": 0.5392
+    },
+    {
+      "source": "hill_sun_valley__07",
+      "target": "hidalgo_anemoi__05",
+      "weight": 0.5607
+    },
+    {
+      "source": "hill_sun_valley__06",
+      "target": "hidalgo_anemoi__05",
+      "weight": 0.5377
+    },
+    {
+      "source": "hill_sun_valley__01",
+      "target": "hidalgo_anemoi__05",
+      "weight": 0.5361
+    },
+    {
+      "source": "katy_ochoa__10",
+      "target": "hidalgo_anemoi__05",
+      "weight": 0.5106
+    },
+    {
+      "source": "katy_ochoa__07",
+      "target": "hidalgo_anemoi__05",
+      "weight": 0.5361
+    },
+    {
+      "source": "hidalgo_anemoi__05",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.5441
+    },
+    {
+      "source": "hidalgo_anemoi__00",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.5553
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.5744
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.605
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.5549
+    },
+    {
+      "source": "hill_sun_valley__00",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.5553
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.5333
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.6366
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.6096
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.621
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.5553
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.5018
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.6074
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.6184
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.5613
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.5246
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.5553
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.5001
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.5844
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.6021
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.5478
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.5166
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "hidalgo_anemoi__06",
+      "weight": 0.5553
+    },
+    {
+      "source": "hidalgo_anemoi__04",
+      "target": "hidalgo_anemoi__07",
+      "weight": 0.8434
+    },
+    {
+      "source": "hidalgo_anemoi__03",
+      "target": "hidalgo_anemoi__07",
+      "weight": 0.8849
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "hidalgo_anemoi__07",
+      "weight": 0.6381
+    },
+    {
+      "source": "hill_sun_valley__02",
+      "target": "hidalgo_anemoi__07",
+      "weight": 0.8154
+    },
+    {
+      "source": "hidalgo_anemoi__07",
+      "target": "hidalgo_anemoi__08",
+      "weight": 0.6204
+    },
+    {
+      "source": "hidalgo_anemoi__04",
+      "target": "hidalgo_anemoi__08",
+      "weight": 0.5497
+    },
+    {
+      "source": "hidalgo_anemoi__03",
+      "target": "hidalgo_anemoi__08",
+      "weight": 0.5275
+    },
+    {
+      "source": "hill_sun_valley__02",
+      "target": "hidalgo_anemoi__08",
+      "weight": 0.5184
+    },
+    {
+      "source": "hidalgo_anemoi__07",
+      "target": "hidalgo_anemoi__09",
+      "weight": 0.5259
+    },
+    {
+      "source": "hill_sun_valley__08",
+      "target": "hidalgo_anemoi__09",
+      "weight": 0.5907
+    },
+    {
+      "source": "hill_sun_valley__07",
+      "target": "hidalgo_anemoi__09",
+      "weight": 0.5943
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "hidalgo_anemoi__09",
+      "weight": 0.5311
+    },
+    {
+      "source": "gillespie_marshall__08",
+      "target": "hidalgo_anemoi__09",
+      "weight": 0.5304
+    },
+    {
+      "source": "gillespie_marshall__02",
+      "target": "hidalgo_anemoi__09",
+      "weight": 0.5413
+    },
+    {
+      "source": "hidalgo_anemoi__09",
+      "target": "hidalgo_anemoi__10",
+      "weight": 0.6254
+    },
+    {
+      "source": "hidalgo_anemoi__05",
+      "target": "hidalgo_anemoi__10",
+      "weight": 0.5369
+    },
+    {
+      "source": "hill_sun_valley__08",
+      "target": "hidalgo_anemoi__10",
+      "weight": 0.8793
+    },
+    {
+      "source": "hill_sun_valley__07",
+      "target": "hidalgo_anemoi__10",
+      "weight": 0.9043
+    },
+    {
+      "source": "gillespie_marshall__08",
+      "target": "hidalgo_anemoi__10",
+      "weight": 0.5729
+    },
+    {
+      "source": "hidalgo_anemoi__10",
+      "target": "hidalgo_anemoi__11",
+      "weight": 0.6285
+    },
+    {
+      "source": "hidalgo_anemoi__09",
+      "target": "hidalgo_anemoi__11",
+      "weight": 0.9256
+    },
+    {
+      "source": "hill_sun_valley__08",
+      "target": "hidalgo_anemoi__11",
+      "weight": 0.6374
+    },
+    {
+      "source": "hill_sun_valley__07",
+      "target": "hidalgo_anemoi__11",
+      "weight": 0.6534
+    },
+    {
+      "source": "gillespie_marshall__08",
+      "target": "hidalgo_anemoi__11",
+      "weight": 0.5833
+    },
+    {
+      "source": "gillespie_marshall__02",
+      "target": "hidalgo_anemoi__11",
+      "weight": 0.5176
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.5148
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.8476
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.7772
+    },
+    {
+      "source": "gillespie_marshall__09",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.6049
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.6482
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.5492
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.5257
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.6405
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.5981
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.5042
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.5278
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.5055
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.5765
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.6412
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.6362
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.6144
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.5243
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.5197
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.5296
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "hidalgo_anemoi__12",
+      "weight": 0.5088
+    },
+    {
+      "source": "hidalgo_anemoi__05",
+      "target": "hidalgo_anemoi__13",
+      "weight": 0.5256
+    },
+    {
+      "source": "hill_sun_valley__09",
+      "target": "hidalgo_anemoi__13",
+      "weight": 0.9583
+    },
+    {
+      "source": "hill_sun_valley__06",
+      "target": "hidalgo_anemoi__13",
+      "weight": 0.8437
+    },
+    {
+      "source": "katy_ochoa__10",
+      "target": "hidalgo_anemoi__13",
+      "weight": 0.6535
+    },
+    {
+      "source": "katy_ochoa__09",
+      "target": "hidalgo_anemoi__13",
+      "weight": 0.5799
+    },
+    {
+      "source": "katy_ochoa__07",
+      "target": "hidalgo_anemoi__13",
+      "weight": 0.5277
+    },
+    {
+      "source": "hidalgo_anemoi__13",
+      "target": "hidalgo_anemoi__14",
+      "weight": 0.5813
+    },
+    {
+      "source": "hidalgo_anemoi__02",
+      "target": "hidalgo_anemoi__14",
+      "weight": 0.7466
+    },
+    {
+      "source": "hidalgo_anemoi__01",
+      "target": "hidalgo_anemoi__14",
+      "weight": 0.7264
+    },
+    {
+      "source": "hill_sun_valley__09",
+      "target": "hidalgo_anemoi__14",
+      "weight": 0.6192
+    },
+    {
+      "source": "hill_sun_valley__06",
+      "target": "hidalgo_anemoi__14",
+      "weight": 0.5114
+    },
+    {
+      "source": "hill_sun_valley__01",
+      "target": "hidalgo_anemoi__14",
+      "weight": 0.7229
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "hidalgo_anemoi__14",
+      "weight": 0.5109
+    },
+    {
+      "source": "katy_ochoa__10",
+      "target": "hidalgo_anemoi__14",
+      "weight": 0.5829
+    },
+    {
+      "source": "katy_ochoa__09",
+      "target": "hidalgo_anemoi__14",
+      "weight": 0.5707
+    },
+    {
+      "source": "katy_ochoa__07",
+      "target": "hidalgo_anemoi__14",
+      "weight": 0.5119
+    },
+    {
+      "source": "hidalgo_anemoi__06",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 0.5553
+    },
+    {
+      "source": "hidalgo_anemoi__02",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 0.5167
+    },
+    {
+      "source": "hidalgo_anemoi__01",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 0.5407
+    },
+    {
+      "source": "hidalgo_anemoi__00",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 0.7
+    },
+    {
+      "source": "hill_sun_valley__01",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 0.5205
+    },
+    {
+      "source": "hill_sun_valley__00",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 1.0
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 0.7335
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 0.5378
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 0.5443
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 0.5502
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 1.0
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 0.5085
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 0.5196
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 0.5513
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 0.7
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 0.5256
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 0.5539
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "hidalgo_kiskadee__00",
+      "weight": 0.7
+    },
+    {
+      "source": "hidalgo_anemoi__08",
+      "target": "hidalgo_kiskadee__01",
+      "weight": 0.5088
+    },
+    {
+      "source": "hidalgo_anemoi__07",
+      "target": "hidalgo_kiskadee__01",
+      "weight": 0.8027
+    },
+    {
+      "source": "hidalgo_anemoi__04",
+      "target": "hidalgo_kiskadee__01",
+      "weight": 0.9161
+    },
+    {
+      "source": "hidalgo_anemoi__03",
+      "target": "hidalgo_kiskadee__01",
+      "weight": 0.9025
+    },
+    {
+      "source": "hill_sun_valley__02",
+      "target": "hidalgo_kiskadee__01",
+      "weight": 0.967
+    },
+    {
+      "source": "hidalgo_kiskadee__00",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5736
+    },
+    {
+      "source": "hidalgo_anemoi__06",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.9503
+    },
+    {
+      "source": "hidalgo_anemoi__05",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5688
+    },
+    {
+      "source": "hidalgo_anemoi__00",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5736
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5405
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5576
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.6046
+    },
+    {
+      "source": "hill_sun_valley__00",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5736
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5089
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.6027
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5622
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.6707
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5096
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5736
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5734
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.571
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.611
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5602
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5106
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5736
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5442
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5823
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5928
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5499
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5051
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "hidalgo_kiskadee__02",
+      "weight": 0.5736
+    },
+    {
+      "source": "hidalgo_kiskadee__02",
+      "target": "kendall_flat_rock__00",
+      "weight": 0.5736
+    },
+    {
+      "source": "hidalgo_kiskadee__00",
+      "target": "kendall_flat_rock__00",
+      "weight": 0.7
+    },
+    {
+      "source": "hidalgo_anemoi__06",
+      "target": "kendall_flat_rock__00",
+      "weight": 0.5553
+    },
+    {
+      "source": "hidalgo_anemoi__00",
+      "target": "kendall_flat_rock__00",
+      "weight": 1.0
+    },
+    {
+      "source": "hill_sun_valley__00",
+      "target": "kendall_flat_rock__00",
+      "weight": 0.7
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "kendall_flat_rock__00",
+      "weight": 0.5378
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "kendall_flat_rock__00",
+      "weight": 0.5443
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "kendall_flat_rock__00",
+      "weight": 0.5502
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "kendall_flat_rock__00",
+      "weight": 0.7
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "kendall_flat_rock__00",
+      "weight": 0.5085
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "kendall_flat_rock__00",
+      "weight": 0.5196
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "kendall_flat_rock__00",
+      "weight": 0.5513
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "kendall_flat_rock__00",
+      "weight": 0.7
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "kendall_flat_rock__00",
+      "weight": 0.5256
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "kendall_flat_rock__00",
+      "weight": 0.8539
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "kendall_flat_rock__00",
+      "weight": 1.0
+    },
+    {
+      "source": "kendall_flat_rock__00",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.5355
+    },
+    {
+      "source": "hidalgo_kiskadee__02",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.5182
+    },
+    {
+      "source": "hidalgo_kiskadee__00",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.5355
+    },
+    {
+      "source": "hidalgo_anemoi__00",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.5355
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.5176
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.6001
+    },
+    {
+      "source": "hill_sun_valley__00",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.5355
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.7564
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.7632
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.5086
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.5203
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.658
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.5355
+    },
+    {
+      "source": "katy_ochoa__04",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.541
+    },
+    {
+      "source": "katy_ochoa__01",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.5739
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.7998
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.5603
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.5886
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.6476
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.5355
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.5207
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.8692
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.6016
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.6671
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "kendall_flat_rock__01",
+      "weight": 0.5355
+    },
+    {
+      "source": "kendall_flat_rock__01",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5355
+    },
+    {
+      "source": "kendall_flat_rock__00",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5849
+    },
+    {
+      "source": "hidalgo_kiskadee__02",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.6734
+    },
+    {
+      "source": "hidalgo_kiskadee__00",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5849
+    },
+    {
+      "source": "hidalgo_anemoi__06",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.6303
+    },
+    {
+      "source": "hidalgo_anemoi__00",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5849
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5268
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5385
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5779
+    },
+    {
+      "source": "hill_sun_valley__00",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5849
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.589
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.8431
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.6441
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.8253
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5849
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5597
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.552
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5844
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5822
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5264
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5849
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.7514
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5281
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.8605
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.6034
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5705
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5203
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "kendall_flat_rock__02",
+      "weight": 0.5849
+    },
+    {
+      "source": "kendall_flat_rock__02",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.6303
+    },
+    {
+      "source": "kendall_flat_rock__00",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.5553
+    },
+    {
+      "source": "hidalgo_kiskadee__02",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.6503
+    },
+    {
+      "source": "hidalgo_kiskadee__00",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.5553
+    },
+    {
+      "source": "hidalgo_anemoi__06",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.7
+    },
+    {
+      "source": "hidalgo_anemoi__00",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.5553
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.5744
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.605
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.5549
+    },
+    {
+      "source": "hill_sun_valley__00",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.5553
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.5333
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.6366
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.6096
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.921
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.5553
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.5018
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.6074
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.6184
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.5613
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.5246
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.7851
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.8553
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.5001
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.5844
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.6021
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.5478
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.5166
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "kendall_flat_rock__03",
+      "weight": 0.5553
+    },
+    {
+      "source": "kendall_flat_rock__03",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5394
+    },
+    {
+      "source": "kendall_flat_rock__02",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.794
+    },
+    {
+      "source": "kendall_flat_rock__01",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5129
+    },
+    {
+      "source": "hidalgo_kiskadee__02",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.507
+    },
+    {
+      "source": "hidalgo_anemoi__12",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5559
+    },
+    {
+      "source": "hidalgo_anemoi__06",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5394
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.6148
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.6003
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5481
+    },
+    {
+      "source": "gillespie_marshall__09",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5083
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.572
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.576
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5998
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.8847
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5108
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.8258
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5188
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5364
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.6036
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5694
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5802
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5239
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5378
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.521
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.8961
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.6152
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.601
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.8685
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5657
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5231
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "kendall_flat_rock__04",
+      "weight": 0.5117
+    },
+    {
+      "source": "hidalgo_anemoi__14",
+      "target": "kendall_flat_rock__05",
+      "weight": 0.5005
+    },
+    {
+      "source": "hidalgo_anemoi__13",
+      "target": "kendall_flat_rock__05",
+      "weight": 0.5839
+    },
+    {
+      "source": "hidalgo_anemoi__05",
+      "target": "kendall_flat_rock__05",
+      "weight": 0.5391
+    },
+    {
+      "source": "hidalgo_anemoi__01",
+      "target": "kendall_flat_rock__05",
+      "weight": 0.5188
+    },
+    {
+      "source": "hill_sun_valley__09",
+      "target": "kendall_flat_rock__05",
+      "weight": 0.5662
+    },
+    {
+      "source": "hill_sun_valley__06",
+      "target": "kendall_flat_rock__05",
+      "weight": 0.6148
+    },
+    {
+      "source": "gillespie_marshall__08",
+      "target": "kendall_flat_rock__05",
+      "weight": 0.5578
+    },
+    {
+      "source": "gillespie_marshall__02",
+      "target": "kendall_flat_rock__05",
+      "weight": 0.5283
+    },
+    {
+      "source": "katy_ochoa__10",
+      "target": "kendall_flat_rock__05",
+      "weight": 0.5626
+    },
+    {
+      "source": "katy_ochoa__09",
+      "target": "kendall_flat_rock__05",
+      "weight": 0.575
+    },
+    {
+      "source": "katy_ochoa__07",
+      "target": "kendall_flat_rock__05",
+      "weight": 0.5933
+    },
+    {
+      "source": "hidalgo_kiskadee__01",
+      "target": "kendall_flat_rock__06",
+      "weight": 0.5218
+    },
+    {
+      "source": "hidalgo_anemoi__08",
+      "target": "kendall_flat_rock__06",
+      "weight": 0.5326
+    },
+    {
+      "source": "hidalgo_anemoi__04",
+      "target": "kendall_flat_rock__06",
+      "weight": 0.5097
+    },
+    {
+      "source": "hill_sun_valley__02",
+      "target": "kendall_flat_rock__06",
+      "weight": 0.5286
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "kendall_flat_rock__06",
+      "weight": 0.5301
+    },
+    {
+      "source": "kendall_flat_rock__05",
+      "target": "kendall_flat_rock__07",
+      "weight": 0.7913
+    },
+    {
+      "source": "hidalgo_anemoi__14",
+      "target": "kendall_flat_rock__07",
+      "weight": 0.6408
+    },
+    {
+      "source": "hidalgo_anemoi__13",
+      "target": "kendall_flat_rock__07",
+      "weight": 0.5695
+    },
+    {
+      "source": "hill_sun_valley__09",
+      "target": "kendall_flat_rock__07",
+      "weight": 0.6079
+    },
+    {
+      "source": "gillespie_marshall__08",
+      "target": "kendall_flat_rock__07",
+      "weight": 0.6
+    },
+    {
+      "source": "katy_ochoa__10",
+      "target": "kendall_flat_rock__07",
+      "weight": 0.5648
+    },
+    {
+      "source": "katy_ochoa__09",
+      "target": "kendall_flat_rock__07",
+      "weight": 0.5383
+    },
+    {
+      "source": "hidalgo_kiskadee__01",
+      "target": "fannin_platinum__00",
+      "weight": 0.8265
+    },
+    {
+      "source": "hidalgo_anemoi__07",
+      "target": "fannin_platinum__00",
+      "weight": 0.7626
+    },
+    {
+      "source": "hidalgo_anemoi__04",
+      "target": "fannin_platinum__00",
+      "weight": 0.7917
+    },
+    {
+      "source": "hidalgo_anemoi__03",
+      "target": "fannin_platinum__00",
+      "weight": 0.8231
+    },
+    {
+      "source": "hill_sun_valley__02",
+      "target": "fannin_platinum__00",
+      "weight": 0.8078
+    },
+    {
+      "source": "katy_ochoa__00",
+      "target": "fannin_platinum__00",
+      "weight": 0.5
+    },
+    {
+      "source": "kendall_flat_rock__03",
+      "target": "fannin_platinum__01",
+      "weight": 0.5037
+    },
+    {
+      "source": "kendall_flat_rock__02",
+      "target": "fannin_platinum__01",
+      "weight": 0.5576
+    },
+    {
+      "source": "kendall_flat_rock__01",
+      "target": "fannin_platinum__01",
+      "weight": 0.9246
+    },
+    {
+      "source": "kendall_flat_rock__00",
+      "target": "fannin_platinum__01",
+      "weight": 0.5127
+    },
+    {
+      "source": "hidalgo_kiskadee__02",
+      "target": "fannin_platinum__01",
+      "weight": 0.537
+    },
+    {
+      "source": "hidalgo_kiskadee__00",
+      "target": "fannin_platinum__01",
+      "weight": 0.5127
+    },
+    {
+      "source": "hidalgo_anemoi__06",
+      "target": "fannin_platinum__01",
+      "weight": 0.5037
+    },
+    {
+      "source": "hidalgo_anemoi__00",
+      "target": "fannin_platinum__01",
+      "weight": 0.5127
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "fannin_platinum__01",
+      "weight": 0.5166
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "fannin_platinum__01",
+      "weight": 0.5985
+    },
+    {
+      "source": "hill_sun_valley__00",
+      "target": "fannin_platinum__01",
+      "weight": 0.5127
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "fannin_platinum__01",
+      "weight": 0.7576
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "fannin_platinum__01",
+      "weight": 0.7718
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "fannin_platinum__01",
+      "weight": 0.5116
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "fannin_platinum__01",
+      "weight": 0.5382
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "fannin_platinum__01",
+      "weight": 0.596
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "fannin_platinum__01",
+      "weight": 0.5127
+    },
+    {
+      "source": "katy_ochoa__04",
+      "target": "fannin_platinum__01",
+      "weight": 0.553
+    },
+    {
+      "source": "katy_ochoa__01",
+      "target": "fannin_platinum__01",
+      "weight": 0.5341
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "fannin_platinum__01",
+      "weight": 0.8067
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "fannin_platinum__01",
+      "weight": 0.5607
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "fannin_platinum__01",
+      "weight": 0.6045
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "fannin_platinum__01",
+      "weight": 0.5901
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "fannin_platinum__01",
+      "weight": 0.5127
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "fannin_platinum__01",
+      "weight": 0.5256
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "fannin_platinum__01",
+      "weight": 0.8731
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "fannin_platinum__01",
+      "weight": 0.6186
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "fannin_platinum__01",
+      "weight": 0.5994
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "fannin_platinum__01",
+      "weight": 0.5127
+    },
+    {
+      "source": "fannin_platinum__01",
+      "target": "fannin_platinum__02",
+      "weight": 0.5226
+    },
+    {
+      "source": "kendall_flat_rock__04",
+      "target": "fannin_platinum__02",
+      "weight": 0.5592
+    },
+    {
+      "source": "kendall_flat_rock__03",
+      "target": "fannin_platinum__02",
+      "weight": 0.6065
+    },
+    {
+      "source": "kendall_flat_rock__02",
+      "target": "fannin_platinum__02",
+      "weight": 0.5649
+    },
+    {
+      "source": "kendall_flat_rock__01",
+      "target": "fannin_platinum__02",
+      "weight": 0.5153
+    },
+    {
+      "source": "hidalgo_kiskadee__02",
+      "target": "fannin_platinum__02",
+      "weight": 0.5867
+    },
+    {
+      "source": "hidalgo_anemoi__12",
+      "target": "fannin_platinum__02",
+      "weight": 0.5066
+    },
+    {
+      "source": "hidalgo_anemoi__06",
+      "target": "fannin_platinum__02",
+      "weight": 0.6065
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "fannin_platinum__02",
+      "weight": 0.5861
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "fannin_platinum__02",
+      "weight": 0.6373
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "fannin_platinum__02",
+      "weight": 0.5836
+    },
+    {
+      "source": "gillespie_marshall__09",
+      "target": "fannin_platinum__02",
+      "weight": 0.5078
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "fannin_platinum__02",
+      "weight": 0.526
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "fannin_platinum__02",
+      "weight": 0.5548
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "fannin_platinum__02",
+      "weight": 0.5484
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "fannin_platinum__02",
+      "weight": 0.6574
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "fannin_platinum__02",
+      "weight": 0.5962
+    },
+    {
+      "source": "gillespie_marshall__02",
+      "target": "fannin_platinum__02",
+      "weight": 0.5074
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "fannin_platinum__02",
+      "weight": 0.514
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "fannin_platinum__02",
+      "weight": 0.5413
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "fannin_platinum__02",
+      "weight": 0.5369
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "fannin_platinum__02",
+      "weight": 0.5579
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "fannin_platinum__02",
+      "weight": 0.6578
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "fannin_platinum__02",
+      "weight": 0.6119
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "fannin_platinum__02",
+      "weight": 0.591
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "fannin_platinum__02",
+      "weight": 0.5187
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "fannin_platinum__02",
+      "weight": 0.5158
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "fannin_platinum__02",
+      "weight": 0.5301
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "fannin_platinum__02",
+      "weight": 0.5313
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "fannin_platinum__02",
+      "weight": 0.6482
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "fannin_platinum__02",
+      "weight": 0.6809
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "fannin_platinum__02",
+      "weight": 0.5995
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "fannin_platinum__02",
+      "weight": 0.5787
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "fannin_platinum__02",
+      "weight": 0.5063
+    },
+    {
+      "source": "fannin_platinum__02",
+      "target": "fannin_platinum__03",
+      "weight": 0.5675
+    },
+    {
+      "source": "kendall_flat_rock__04",
+      "target": "fannin_platinum__03",
+      "weight": 0.9522
+    },
+    {
+      "source": "kendall_flat_rock__03",
+      "target": "fannin_platinum__03",
+      "weight": 0.5328
+    },
+    {
+      "source": "kendall_flat_rock__02",
+      "target": "fannin_platinum__03",
+      "weight": 0.7911
+    },
+    {
+      "source": "hidalgo_kiskadee__02",
+      "target": "fannin_platinum__03",
+      "weight": 0.5031
+    },
+    {
+      "source": "hidalgo_anemoi__12",
+      "target": "fannin_platinum__03",
+      "weight": 0.5891
+    },
+    {
+      "source": "hidalgo_anemoi__06",
+      "target": "fannin_platinum__03",
+      "weight": 0.5328
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "fannin_platinum__03",
+      "weight": 0.6101
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "fannin_platinum__03",
+      "weight": 0.6181
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "fannin_platinum__03",
+      "weight": 0.5243
+    },
+    {
+      "source": "gillespie_marshall__09",
+      "target": "fannin_platinum__03",
+      "weight": 0.5375
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "fannin_platinum__03",
+      "weight": 0.611
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "fannin_platinum__03",
+      "weight": 0.6012
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "fannin_platinum__03",
+      "weight": 0.5883
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "fannin_platinum__03",
+      "weight": 0.8955
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "fannin_platinum__03",
+      "weight": 0.5086
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "fannin_platinum__03",
+      "weight": 0.798
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "fannin_platinum__03",
+      "weight": 0.5448
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "fannin_platinum__03",
+      "weight": 0.5592
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "fannin_platinum__03",
+      "weight": 0.5938
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "fannin_platinum__03",
+      "weight": 0.5732
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "fannin_platinum__03",
+      "weight": 0.5732
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "fannin_platinum__03",
+      "weight": 0.5428
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "fannin_platinum__03",
+      "weight": 0.5062
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "fannin_platinum__03",
+      "weight": 0.508
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "fannin_platinum__03",
+      "weight": 0.5489
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "fannin_platinum__03",
+      "weight": 0.8752
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "fannin_platinum__03",
+      "weight": 0.6348
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "fannin_platinum__03",
+      "weight": 0.6059
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "fannin_platinum__03",
+      "weight": 0.8811
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "fannin_platinum__03",
+      "weight": 0.5703
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "fannin_platinum__03",
+      "weight": 0.544
+    },
+    {
+      "source": "fannin_platinum__03",
+      "target": "fannin_platinum__04",
+      "weight": 0.5838
+    },
+    {
+      "source": "fannin_platinum__02",
+      "target": "fannin_platinum__04",
+      "weight": 0.503
+    },
+    {
+      "source": "kendall_flat_rock__04",
+      "target": "fannin_platinum__04",
+      "weight": 0.5935
+    },
+    {
+      "source": "hidalgo_anemoi__12",
+      "target": "fannin_platinum__04",
+      "weight": 0.6451
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "fannin_platinum__04",
+      "weight": 0.522
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "fannin_platinum__04",
+      "weight": 0.5375
+    },
+    {
+      "source": "gillespie_marshall__09",
+      "target": "fannin_platinum__04",
+      "weight": 0.8669
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "fannin_platinum__04",
+      "weight": 0.6564
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "fannin_platinum__04",
+      "weight": 0.5618
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "fannin_platinum__04",
+      "weight": 0.5059
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "fannin_platinum__04",
+      "weight": 0.5207
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "fannin_platinum__04",
+      "weight": 0.8981
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "fannin_platinum__04",
+      "weight": 0.9181
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "fannin_platinum__04",
+      "weight": 0.5099
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "fannin_platinum__04",
+      "weight": 0.5042
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "fannin_platinum__04",
+      "weight": 0.8381
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "fannin_platinum__04",
+      "weight": 0.5065
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "fannin_platinum__04",
+      "weight": 0.5451
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "fannin_platinum__04",
+      "weight": 0.8982
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "fannin_platinum__04",
+      "weight": 0.6884
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "fannin_platinum__04",
+      "weight": 0.6336
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "fannin_platinum__04",
+      "weight": 0.5241
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "fannin_platinum__04",
+      "weight": 0.513
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "fannin_platinum__04",
+      "weight": 0.5278
+    },
+    {
+      "source": "fannin_platinum__04",
+      "target": "fannin_platinum__05",
+      "weight": 0.6007
+    },
+    {
+      "source": "fannin_platinum__03",
+      "target": "fannin_platinum__05",
+      "weight": 0.5417
+    },
+    {
+      "source": "fannin_platinum__01",
+      "target": "fannin_platinum__05",
+      "weight": 0.7454
+    },
+    {
+      "source": "kendall_flat_rock__04",
+      "target": "fannin_platinum__05",
+      "weight": 0.5396
+    },
+    {
+      "source": "kendall_flat_rock__01",
+      "target": "fannin_platinum__05",
+      "weight": 0.7638
+    },
+    {
+      "source": "hidalgo_anemoi__12",
+      "target": "fannin_platinum__05",
+      "weight": 0.6145
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "fannin_platinum__05",
+      "weight": 0.5133
+    },
+    {
+      "source": "gillespie_marshall__09",
+      "target": "fannin_platinum__05",
+      "weight": 0.6629
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "fannin_platinum__05",
+      "weight": 0.5789
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "fannin_platinum__05",
+      "weight": 0.8041
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "fannin_platinum__05",
+      "weight": 0.7635
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "fannin_platinum__05",
+      "weight": 0.5927
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "fannin_platinum__05",
+      "weight": 0.5368
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "fannin_platinum__05",
+      "weight": 0.7767
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "fannin_platinum__05",
+      "weight": 0.5247
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "fannin_platinum__05",
+      "weight": 0.6389
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "fannin_platinum__05",
+      "weight": 0.6031
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "fannin_platinum__05",
+      "weight": 0.5902
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "fannin_platinum__05",
+      "weight": 0.5753
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "fannin_platinum__05",
+      "weight": 0.816
+    },
+    {
+      "source": "fannin_platinum__01",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.5127
+    },
+    {
+      "source": "kendall_flat_rock__03",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.8553
+    },
+    {
+      "source": "kendall_flat_rock__02",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.5849
+    },
+    {
+      "source": "kendall_flat_rock__01",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.5355
+    },
+    {
+      "source": "kendall_flat_rock__00",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.7
+    },
+    {
+      "source": "hidalgo_kiskadee__02",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.5736
+    },
+    {
+      "source": "hidalgo_kiskadee__00",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.7
+    },
+    {
+      "source": "hidalgo_anemoi__06",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.5553
+    },
+    {
+      "source": "hidalgo_anemoi__00",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.7
+    },
+    {
+      "source": "hill_sun_valley__00",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.7
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.5378
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.8443
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.5502
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.7
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.5085
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.5196
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.8513
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "kerr_black_mountain__00",
+      "weight": 1.0
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.5256
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.5539
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "kerr_black_mountain__00",
+      "weight": 0.7
+    },
+    {
+      "source": "kerr_black_mountain__00",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.8393
+    },
+    {
+      "source": "fannin_platinum__03",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5283
+    },
+    {
+      "source": "fannin_platinum__02",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5776
+    },
+    {
+      "source": "fannin_platinum__01",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5973
+    },
+    {
+      "source": "kendall_flat_rock__04",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.51
+    },
+    {
+      "source": "kendall_flat_rock__03",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.8091
+    },
+    {
+      "source": "kendall_flat_rock__02",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5579
+    },
+    {
+      "source": "kendall_flat_rock__01",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.6154
+    },
+    {
+      "source": "kendall_flat_rock__00",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5393
+    },
+    {
+      "source": "hidalgo_kiskadee__02",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5393
+    },
+    {
+      "source": "hidalgo_kiskadee__00",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5393
+    },
+    {
+      "source": "hidalgo_anemoi__06",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5091
+    },
+    {
+      "source": "hidalgo_anemoi__00",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5393
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5098
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5665
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5467
+    },
+    {
+      "source": "hill_sun_valley__00",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5393
+    },
+    {
+      "source": "gillespie_marshall__09",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5119
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5107
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.582
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.8467
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.6075
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5393
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5052
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5517
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5828
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.6634
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.9136
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.8393
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5137
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5042
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5519
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.596
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5997
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.669
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5957
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "kerr_black_mountain__01",
+      "weight": 0.5393
+    },
+    {
+      "source": "fannin_platinum__02",
+      "target": "kerr_black_mountain__02",
+      "weight": 0.6001
+    },
+    {
+      "source": "kendall_flat_rock__05",
+      "target": "kerr_black_mountain__02",
+      "weight": 0.5106
+    },
+    {
+      "source": "hidalgo_anemoi__11",
+      "target": "kerr_black_mountain__02",
+      "weight": 0.5031
+    },
+    {
+      "source": "hidalgo_anemoi__10",
+      "target": "kerr_black_mountain__02",
+      "weight": 0.5408
+    },
+    {
+      "source": "hidalgo_anemoi__09",
+      "target": "kerr_black_mountain__02",
+      "weight": 0.5283
+    },
+    {
+      "source": "gillespie_marshall__08",
+      "target": "kerr_black_mountain__02",
+      "weight": 0.8085
+    },
+    {
+      "source": "gillespie_marshall__02",
+      "target": "kerr_black_mountain__02",
+      "weight": 0.885
+    },
+    {
+      "source": "kerr_black_mountain__01",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.8406
+    },
+    {
+      "source": "kerr_black_mountain__00",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.7567
+    },
+    {
+      "source": "fannin_platinum__05",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5342
+    },
+    {
+      "source": "fannin_platinum__04",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5628
+    },
+    {
+      "source": "fannin_platinum__03",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.6391
+    },
+    {
+      "source": "fannin_platinum__02",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.6006
+    },
+    {
+      "source": "fannin_platinum__01",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5057
+    },
+    {
+      "source": "kendall_flat_rock__04",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.6369
+    },
+    {
+      "source": "kendall_flat_rock__03",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.8735
+    },
+    {
+      "source": "kendall_flat_rock__02",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5172
+    },
+    {
+      "source": "kendall_flat_rock__01",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.512
+    },
+    {
+      "source": "hidalgo_kiskadee__02",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5333
+    },
+    {
+      "source": "hidalgo_anemoi__12",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5625
+    },
+    {
+      "source": "hidalgo_anemoi__06",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5735
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.6011
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.6536
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5592
+    },
+    {
+      "source": "gillespie_marshall__09",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5148
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.572
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5554
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5813
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.633
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.8383
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5193
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5174
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.525
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5863
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.6127
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.613
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5581
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.8284
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.7567
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5216
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5533
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.605
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.6525
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.613
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.6077
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5575
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "kerr_black_mountain__03",
+      "weight": 0.5079
+    },
+    {
+      "source": "kerr_black_mountain__03",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.6179
+    },
+    {
+      "source": "kerr_black_mountain__01",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5093
+    },
+    {
+      "source": "fannin_platinum__05",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5663
+    },
+    {
+      "source": "fannin_platinum__04",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.6184
+    },
+    {
+      "source": "fannin_platinum__03",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.6515
+    },
+    {
+      "source": "fannin_platinum__02",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5405
+    },
+    {
+      "source": "kendall_flat_rock__04",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.6285
+    },
+    {
+      "source": "kendall_flat_rock__03",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5095
+    },
+    {
+      "source": "hidalgo_kiskadee__00",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.7387
+    },
+    {
+      "source": "hidalgo_anemoi__12",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.6037
+    },
+    {
+      "source": "hidalgo_anemoi__06",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5095
+    },
+    {
+      "source": "hidalgo_anemoi__02",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5059
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5741
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5841
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5128
+    },
+    {
+      "source": "hill_sun_valley__00",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.7387
+    },
+    {
+      "source": "gillespie_marshall__09",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5414
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.9255
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.6329
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5549
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5642
+    },
+    {
+      "source": "gillespie_marshall__00",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.7387
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.556
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5801
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5597
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5446
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5686
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5215
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5062
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5155
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5586
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.6087
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.6796
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.572
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5525
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5652
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "kerr_black_mountain__04",
+      "weight": 0.5228
+    },
+    {
+      "source": "kerr_black_mountain__04",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.5915
+    },
+    {
+      "source": "kerr_black_mountain__03",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.8414
+    },
+    {
+      "source": "kerr_black_mountain__01",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.7725
+    },
+    {
+      "source": "kerr_black_mountain__00",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.7246
+    },
+    {
+      "source": "fannin_platinum__05",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.597
+    },
+    {
+      "source": "fannin_platinum__04",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.6642
+    },
+    {
+      "source": "fannin_platinum__03",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.561
+    },
+    {
+      "source": "kendall_flat_rock__04",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.581
+    },
+    {
+      "source": "kendall_flat_rock__03",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.7675
+    },
+    {
+      "source": "hidalgo_anemoi__12",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.65
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.5085
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.5194
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.5005
+    },
+    {
+      "source": "gillespie_marshall__09",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.5689
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.627
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.5444
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.5055
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.7562
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.507
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.6067
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.5951
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.5186
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.8203
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.7246
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.5507
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.6054
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.6751
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.6052
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.5092
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "kerr_black_mountain__05",
+      "weight": 0.5097
+    },
+    {
+      "source": "kerr_black_mountain__05",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.9178
+    },
+    {
+      "source": "kerr_black_mountain__04",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.5414
+    },
+    {
+      "source": "kerr_black_mountain__03",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.8101
+    },
+    {
+      "source": "kerr_black_mountain__01",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.7603
+    },
+    {
+      "source": "kerr_black_mountain__00",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.7178
+    },
+    {
+      "source": "fannin_platinum__05",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.6731
+    },
+    {
+      "source": "fannin_platinum__04",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.5901
+    },
+    {
+      "source": "fannin_platinum__03",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.5197
+    },
+    {
+      "source": "kendall_flat_rock__04",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.542
+    },
+    {
+      "source": "kendall_flat_rock__03",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.7439
+    },
+    {
+      "source": "hidalgo_anemoi__12",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.5918
+    },
+    {
+      "source": "gillespie_marshall__09",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.646
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.5584
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.7382
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.501
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.5794
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.5276
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.813
+    },
+    {
+      "source": "gillespie_rogers__00",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.7178
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.6284
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.5883
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.6007
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "kerr_black_mountain__06",
+      "weight": 0.55
+    },
+    {
+      "source": "fannin_platinum__00",
+      "target": "hood_apache_hill__00",
+      "weight": 1.0
+    },
+    {
+      "source": "hidalgo_kiskadee__01",
+      "target": "hood_apache_hill__00",
+      "weight": 0.8265
+    },
+    {
+      "source": "hidalgo_anemoi__07",
+      "target": "hood_apache_hill__00",
+      "weight": 0.7626
+    },
+    {
+      "source": "hidalgo_anemoi__04",
+      "target": "hood_apache_hill__00",
+      "weight": 0.7917
+    },
+    {
+      "source": "hidalgo_anemoi__03",
+      "target": "hood_apache_hill__00",
+      "weight": 0.8231
+    },
+    {
+      "source": "hill_sun_valley__02",
+      "target": "hood_apache_hill__00",
+      "weight": 0.8078
+    },
+    {
+      "source": "katy_ochoa__00",
+      "target": "hood_apache_hill__00",
+      "weight": 0.5
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "van_zandt__02",
+      "weight": 0.5844
+    },
+    {
+      "source": "van_zandt__00",
+      "target": "van_zandt__02",
+      "weight": 0.5256
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "van_zandt__03",
+      "weight": 0.6227
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "van_zandt__03",
+      "weight": 0.5584
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "van_zandt__04",
+      "weight": 0.6116
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "van_zandt__04",
+      "weight": 0.5949
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "van_zandt__04",
+      "weight": 0.5122
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "van_zandt__05",
+      "weight": 0.6291
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "van_zandt__05",
+      "weight": 0.5611
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "van_zandt__05",
+      "weight": 0.8502
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "van_zandt__06",
+      "weight": 0.6205
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "van_zandt__06",
+      "weight": 0.5556
+    },
+    {
+      "source": "van_zandt__06",
+      "target": "van_zandt__07",
+      "weight": 0.6675
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "van_zandt__07",
+      "weight": 0.8598
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "van_zandt__07",
+      "weight": 0.5431
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "van_zandt__07",
+      "weight": 0.5576
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "van_zandt__07",
+      "weight": 0.8172
+    },
+    {
+      "source": "kerr_black_mountain__05",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5086
+    },
+    {
+      "source": "kerr_black_mountain__04",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5185
+    },
+    {
+      "source": "kerr_black_mountain__03",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5647
+    },
+    {
+      "source": "kerr_black_mountain__01",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5504
+    },
+    {
+      "source": "fannin_platinum__04",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5026
+    },
+    {
+      "source": "fannin_platinum__03",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5293
+    },
+    {
+      "source": "fannin_platinum__02",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5865
+    },
+    {
+      "source": "fannin_platinum__01",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5903
+    },
+    {
+      "source": "kendall_flat_rock__04",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5554
+    },
+    {
+      "source": "kendall_flat_rock__03",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5555
+    },
+    {
+      "source": "kendall_flat_rock__02",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5786
+    },
+    {
+      "source": "kendall_flat_rock__01",
+      "target": "hood_apache_hill__01",
+      "weight": 0.6128
+    },
+    {
+      "source": "hidalgo_kiskadee__02",
+      "target": "hood_apache_hill__01",
+      "weight": 0.6052
+    },
+    {
+      "source": "hidalgo_anemoi__08",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5685
+    },
+    {
+      "source": "hidalgo_anemoi__06",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5555
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5165
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5799
+    },
+    {
+      "source": "hill_sun_valley__03",
+      "target": "hood_apache_hill__01",
+      "weight": 0.6872
+    },
+    {
+      "source": "gillespie_marshall__05",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5079
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "hood_apache_hill__01",
+      "weight": 0.571
+    },
+    {
+      "source": "gillespie_marshall__03",
+      "target": "hood_apache_hill__01",
+      "weight": 0.6074
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5788
+    },
+    {
+      "source": "gillespie_rogers__05",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5101
+    },
+    {
+      "source": "gillespie_rogers__04",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5622
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "hood_apache_hill__01",
+      "weight": 0.6473
+    },
+    {
+      "source": "gillespie_rogers__02",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5742
+    },
+    {
+      "source": "gillespie_rogers__01",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5684
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5096
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5121
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5441
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5919
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "hood_apache_hill__01",
+      "weight": 0.6253
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5671
+    },
+    {
+      "source": "van_zandt__01",
+      "target": "hood_apache_hill__01",
+      "weight": 0.5905
+    },
+    {
+      "source": "hood_apache_hill__00",
+      "target": "hood_apache_hill__02",
+      "weight": 0.7323
+    },
+    {
+      "source": "fannin_platinum__00",
+      "target": "hood_apache_hill__02",
+      "weight": 0.7323
+    },
+    {
+      "source": "kendall_flat_rock__06",
+      "target": "hood_apache_hill__02",
+      "weight": 0.6096
+    },
+    {
+      "source": "hidalgo_kiskadee__01",
+      "target": "hood_apache_hill__02",
+      "weight": 0.8446
+    },
+    {
+      "source": "hidalgo_anemoi__11",
+      "target": "hood_apache_hill__02",
+      "weight": 0.5075
+    },
+    {
+      "source": "hidalgo_anemoi__09",
+      "target": "hood_apache_hill__02",
+      "weight": 0.5558
+    },
+    {
+      "source": "hidalgo_anemoi__08",
+      "target": "hood_apache_hill__02",
+      "weight": 0.5997
+    },
+    {
+      "source": "hidalgo_anemoi__07",
+      "target": "hood_apache_hill__02",
+      "weight": 0.8504
+    },
+    {
+      "source": "hidalgo_anemoi__04",
+      "target": "hood_apache_hill__02",
+      "weight": 0.84
+    },
+    {
+      "source": "hidalgo_anemoi__03",
+      "target": "hood_apache_hill__02",
+      "weight": 0.7806
+    },
+    {
+      "source": "hill_sun_valley__05",
+      "target": "hood_apache_hill__02",
+      "weight": 0.5785
+    },
+    {
+      "source": "hill_sun_valley__02",
+      "target": "hood_apache_hill__02",
+      "weight": 0.8505
+    },
+    {
+      "source": "kerr_black_mountain__06",
+      "target": "hood_apache_hill__03",
+      "weight": 0.683
+    },
+    {
+      "source": "kerr_black_mountain__05",
+      "target": "hood_apache_hill__03",
+      "weight": 0.6073
+    },
+    {
+      "source": "kerr_black_mountain__04",
+      "target": "hood_apache_hill__03",
+      "weight": 0.5552
+    },
+    {
+      "source": "kerr_black_mountain__03",
+      "target": "hood_apache_hill__03",
+      "weight": 0.5235
+    },
+    {
+      "source": "fannin_platinum__05",
+      "target": "hood_apache_hill__03",
+      "weight": 0.688
+    },
+    {
+      "source": "fannin_platinum__04",
+      "target": "hood_apache_hill__03",
+      "weight": 0.6066
+    },
+    {
+      "source": "fannin_platinum__03",
+      "target": "hood_apache_hill__03",
+      "weight": 0.8319
+    },
+    {
+      "source": "kendall_flat_rock__04",
+      "target": "hood_apache_hill__03",
+      "weight": 0.8511
+    },
+    {
+      "source": "kendall_flat_rock__02",
+      "target": "hood_apache_hill__03",
+      "weight": 0.733
+    },
+    {
+      "source": "hidalgo_anemoi__12",
+      "target": "hood_apache_hill__03",
+      "weight": 0.6044
+    },
+    {
+      "source": "hill_sun_valley__04",
+      "target": "hood_apache_hill__03",
+      "weight": 0.5042
+    },
+    {
+      "source": "gillespie_marshall__09",
+      "target": "hood_apache_hill__03",
+      "weight": 0.6553
+    },
+    {
+      "source": "gillespie_marshall__07",
+      "target": "hood_apache_hill__03",
+      "weight": 0.5698
+    },
+    {
+      "source": "gillespie_marshall__06",
+      "target": "hood_apache_hill__03",
+      "weight": 0.5004
+    },
+    {
+      "source": "gillespie_marshall__04",
+      "target": "hood_apache_hill__03",
+      "weight": 0.788
+    },
+    {
+      "source": "gillespie_marshall__01",
+      "target": "hood_apache_hill__03",
+      "weight": 0.7863
+    },
+    {
+      "source": "gillespie_rogers__08",
+      "target": "hood_apache_hill__03",
+      "weight": 0.5868
+    },
+    {
+      "source": "gillespie_rogers__07",
+      "target": "hood_apache_hill__03",
+      "weight": 0.5327
+    },
+    {
+      "source": "gillespie_rogers__03",
+      "target": "hood_apache_hill__03",
+      "weight": 0.513
+    },
+    {
+      "source": "van_zandt__10",
+      "target": "hood_apache_hill__03",
+      "weight": 0.6342
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "hood_apache_hill__03",
+      "weight": 0.5966
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "hood_apache_hill__03",
+      "weight": 0.9011
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "hood_apache_hill__03",
+      "weight": 0.5641
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "hood_apache_hill__03",
+      "weight": 0.7842
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "hood_apache_hill__03",
+      "weight": 0.505
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "van_zandt__08",
+      "weight": 0.6238
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "van_zandt__08",
+      "weight": 0.5191
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "van_zandt__08",
+      "weight": 0.8069
+    },
+    {
+      "source": "van_zandt__03",
+      "target": "van_zandt__08",
+      "weight": 0.5182
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "van_zandt__09",
+      "weight": 0.5924
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "van_zandt__09",
+      "weight": 0.5683
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "van_zandt__09",
+      "weight": 0.5457
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "van_zandt__09",
+      "weight": 0.5393
+    },
+    {
+      "source": "van_zandt__02",
+      "target": "van_zandt__09",
+      "weight": 0.5051
+    },
+    {
+      "source": "van_zandt__09",
+      "target": "van_zandt__10",
+      "weight": 0.6189
+    },
+    {
+      "source": "van_zandt__08",
+      "target": "van_zandt__10",
+      "weight": 0.541
+    },
+    {
+      "source": "van_zandt__07",
+      "target": "van_zandt__10",
+      "weight": 0.5227
+    },
+    {
+      "source": "van_zandt__05",
+      "target": "van_zandt__10",
+      "weight": 0.5273
+    },
+    {
+      "source": "van_zandt__04",
+      "target": "van_zandt__10",
+      "weight": 0.5
+    }
+  ]
+}

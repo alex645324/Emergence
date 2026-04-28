@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PFI Graph Test — Viewer</title>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; height: 100%; background: #0f0f10; color: #e5e5e5;
+               font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  #app { display: grid; grid-template-rows: 56px 1fr; height: 100vh; }
+  #topbar { display: flex; align-items: center; gap: 18px; padding: 0 20px;
+            border-bottom: 1px solid #222; background: #141416; }
+  #topbar h1 { font-size: 14px; font-weight: 600; margin: 0; color: #cbd5e1; }
+  #topbar label { font-size: 12px; color: #94a3b8; }
+  #topbar select { background: #0f0f10; color: #e5e5e5; border: 1px solid #2a2a2e;
+                   border-radius: 6px; padding: 6px 10px; font-size: 13px; }
+  #inject-btn { background: #1f2937; color: #e5e5e5; border: 1px solid #2a2a2e;
+                border-radius: 6px; padding: 6px 14px; font-size: 13px; font-weight: 500;
+                cursor: pointer; transition: background 120ms; }
+  #inject-btn:hover:not(:disabled) { background: #2a3a4f; border-color: #3b82f6; }
+  #inject-btn:disabled { opacity: 0.4; cursor: default; }
+  #main { min-height: 0; }
+  #graph { position: relative; background: #0f0f10; overflow: hidden; height: 100%; }
+  #graph svg { width: 100%; height: 100%; display: block; cursor: grab; }
+  #graph svg:active { cursor: grabbing; }
+  #legend { position: absolute; left: 14px; bottom: 14px; background: rgba(15,15,16,0.9);
+            border: 1px solid #222; border-radius: 8px; padding: 10px 12px; font-size: 11px;
+            color: #94a3b8; }
+  #legend .row { display: flex; align-items: center; gap: 8px; margin: 3px 0; }
+  #legend .dot { width: 10px; height: 10px; border-radius: 50%; }
+  #legend .dot.held { border: 2px solid #fff; box-sizing: border-box; }
+  #tooltip { position: absolute; pointer-events: none; background: #1a1a1d;
+             border: 1px solid #2a2a2e; padding: 8px 10px; border-radius: 6px;
+             font-size: 11.5px; color: #e5e5e5; max-width: 320px; opacity: 0;
+             transition: opacity 100ms; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+  #tooltip b { color: #fff; }
+  #tooltip .t-meta { color: #94a3b8; font-size: 10.5px; margin-top: 3px; }
+  #position-summary { position: absolute; top: 14px; right: 14px;
+                      background: rgba(15,15,16,0.92); border: 1px solid #222;
+                      border-radius: 8px; padding: 14px 16px; font-size: 13px;
+                      color: #cbd5e1; max-width: 320px; opacity: 0;
+                      transition: opacity 200ms; pointer-events: none;
+                      box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+  #position-summary.show { opacity: 1; }
+  #position-summary .verdict { font-size: 14px; font-weight: 600; color: #e5e5e5;
+                               margin-bottom: 6px; }
+  #position-summary .verdict.esc { color: #ef4444; }
+  #position-summary .verdict.clean { color: #4ade80; }
+  #position-summary .verdict.mixed { color: #cbd5e1; }
+  #position-summary .counts { font-size: 12px; color: #94a3b8; margin-bottom: 8px; }
+  #position-summary .truth { font-size: 12.5px; color: #e5e5e5;
+                             border-top: 1px solid #2a2a2e; padding-top: 8px; }
+  #position-summary .truth b { color: #fff; }
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="topbar">
+    <h1>PFI Graph Test</h1>
+    <label>held-out case
+      <select id="case-select"></select>
+    </label>
+    <button id="inject-btn">inject case</button>
+  </div>
+  <div id="main">
+    <div id="graph">
+      <div id="legend">
+        <div class="row"><div class="dot" style="background:#4ade80"></div>clean</div>
+        <div class="row"><div class="dot" style="background:#ef4444"></div>escalation</div>
+        <div class="row"><div class="dot" style="background:#fb923c"></div>withdrawn</div>
+        <div class="row"><div class="dot" style="background:#60a5fa"></div>under_construction</div>
+        <div class="row"><div class="dot held" style="background:#cbd5e1"></div>held-out early action</div>
+      </div>
+      <div id="tooltip"></div>
+      <div id="position-summary"></div>
+    </div>
+  </div>
+</div>
+
+<script src="graphs.js"></script>
+<script>
+const COLOR = {
+  clean: "#4ade80",
+  escalation: "#ef4444",
+  withdrawn: "#fb923c",
+  under_construction: "#60a5fa",
+};
+function colorFor(o) { return COLOR[o] || "#9ca3af"; }
+
+const select = document.getElementById("case-select");
+const injectBtn = document.getElementById("inject-btn");
+const tooltip = document.getElementById("tooltip");
+const positionSummary = document.getElementById("position-summary");
+
+const OUTCOME_PHRASE = {
+  escalation: "escalated",
+  clean: "finished cleanly",
+  withdrawn: "withdrawn",
+  under_construction: "still under construction",
+};
+
+let state = null;
+
+function init() {
+  if (!window.GRAPHS) return;
+  const cases = Object.keys(window.GRAPHS).sort();
+  cases.forEach(c => {
+    const opt = document.createElement("option");
+    opt.value = c;
+    opt.textContent = c;
+    select.appendChild(opt);
+  });
+  const initial = cases.includes("van_zandt") ? "van_zandt" : cases[0];
+  select.value = initial;
+  render(initial);
+  select.addEventListener("change", e => render(e.target.value));
+  injectBtn.addEventListener("click", injectCase);
+}
+
+function render(caseId) {
+  const data = window.GRAPHS[caseId];
+  if (!data) return;
+  renderGraph(data);
+  injectBtn.disabled = false;
+  positionSummary.classList.remove("show");
+  positionSummary.innerHTML = "";
+}
+
+function renderGraph(data) {
+  const el = document.getElementById("graph");
+  d3.select(el).select("svg").remove();
+  const w = el.clientWidth, h = el.clientHeight;
+  const svg = d3.select(el).append("svg")
+    .attr("viewBox", [0, 0, w, h]);
+  const g = svg.append("g");
+  svg.call(d3.zoom().scaleExtent([0.2, 5]).on("zoom", e => g.attr("transform", e.transform)));
+
+  const heldOutIds = new Set(data.nodes.filter(n => n.is_held_out_early).map(n => n.id));
+  const stagedNodes = data.nodes.filter(n => !heldOutIds.has(n.id)).map(n => ({...n}));
+  const stagedLinks = data.edges
+    .filter(e => !heldOutIds.has(e.source) && !heldOutIds.has(e.target))
+    .map(e => ({source: e.source, target: e.target, weight: e.weight}));
+
+  const pendingNodes = data.nodes.filter(n => heldOutIds.has(n.id));
+  const pendingLinks = data.edges
+    .filter(e => heldOutIds.has(e.source) || heldOutIds.has(e.target));
+
+  const linkG = g.append("g").attr("class", "links").attr("stroke", "#3a3a40");
+  const nodeG = g.append("g").attr("class", "nodes");
+
+  const sim = d3.forceSimulation(stagedNodes)
+    .force("link", d3.forceLink(stagedLinks).id(d => d.id)
+      .distance(l => 90 - 60 * (l.weight - 0.5))
+      .strength(l => 0.15 + 0.6 * (l.weight - 0.5)))
+    .force("charge", d3.forceManyBody().strength(-110))
+    .force("center", d3.forceCenter(w / 2, h / 2))
+    .force("collide", d3.forceCollide(8));
+
+  state = { sim, linkG, nodeG, w, h, data,
+            nodes: stagedNodes, links: stagedLinks,
+            pendingNodes, pendingLinks };
+
+  rebind();
+  sim.on("tick", () => {
+    state.linkSel
+      .attr("x1", d => d.source.x).attr("y1", d => d.source.y)
+      .attr("x2", d => d.target.x).attr("y2", d => d.target.y);
+    state.nodeSel.attr("cx", d => d.x).attr("cy", d => d.y);
+  });
+}
+
+function rebind() {
+  state.linkSel = state.linkG.selectAll("line")
+    .data(state.links, d => `${d.source.id || d.source}->${d.target.id || d.target}`)
+    .join("line")
+      .attr("stroke-opacity", l => 0.15 + 0.6 * (l.weight - 0.5))
+      .attr("stroke-width", l => 0.4 + 1.6 * (l.weight - 0.5));
+
+  state.nodeSel = state.nodeG.selectAll("circle")
+    .data(state.nodes, d => d.id)
+    .join(enter => enter.append("circle")
+      .attr("r", d => d.is_held_out_early ? 7 : 5)
+      .attr("fill", d => colorFor(d.outcome))
+      .attr("stroke", d => d.is_held_out_early ? "#fff" : "#0f0f10")
+      .attr("stroke-width", d => d.is_held_out_early ? 2.2 : 1)
+      .style("cursor", "pointer")
+      .call(drag(state.sim))
+      .on("mouseenter", (e, d) => showTooltip(e, d))
+      .on("mousemove", (e) => moveTooltip(e))
+      .on("mouseleave", () => hideTooltip())
+    );
+}
+
+function injectCase() {
+  if (!state || !state.pendingNodes.length) return;
+  const newNodes = state.pendingNodes.map(n => ({...n, x: state.w / 2, y: state.h / 2}));
+  state.nodes.push(...newNodes);
+  const newLinks = state.pendingLinks.map(e => ({
+    source: e.source, target: e.target, weight: e.weight
+  }));
+  state.links.push(...newLinks);
+  state.pendingNodes = [];
+  state.pendingLinks = [];
+
+  state.sim.nodes(state.nodes);
+  state.sim.force("link").links(state.links);
+  rebind();
+  state.sim.alpha(0.6).restart();
+
+  showPositionSummary(state.data);
+  injectBtn.disabled = true;
+}
+
+function showPositionSummary(data) {
+  const allNeighbors = (data.held_out_actions || []).flatMap(a => a.top_k || []);
+  const total = allNeighbors.length;
+  const escCount = allNeighbors.filter(n => n.is_escalation_mech).length;
+  const cleanCount = allNeighbors.filter(n => n.outcome === "clean").length;
+  const escPct = data.summary.escalation_pct;
+  const cleanPct = data.summary.clean_neighbor_pct;
+
+  let verdictText, verdictClass;
+  if (total === 0) {
+    verdictText = "No clear position — too few connections";
+    verdictClass = "mixed";
+  } else if (escPct >= 40 && escPct > cleanPct) {
+    verdictText = "Lands near cases that escalated";
+    verdictClass = "esc";
+  } else if (cleanPct >= 40 && cleanPct > escPct) {
+    verdictText = "Lands near cases that finished cleanly";
+    verdictClass = "clean";
+  } else {
+    verdictText = "Lands between both groups";
+    verdictClass = "mixed";
+  }
+
+  const truthPhrase = OUTCOME_PHRASE[data.outcome] || data.outcome || "unknown";
+
+  positionSummary.innerHTML = `
+    <div class="verdict ${verdictClass}">${verdictText}</div>
+    <div class="counts">${escCount} of ${total} nearest cases escalated. ${cleanCount} ended cleanly.</div>
+    <div class="truth">What actually happened: <b>${truthPhrase}</b></div>
+  `;
+  positionSummary.classList.add("show");
+}
+
+function drag(sim) {
+  return d3.drag()
+    .on("start", (e, d) => {
+      if (!e.active) sim.alphaTarget(0.3).restart();
+      d.fx = d.x; d.fy = d.y;
+    })
+    .on("drag", (e, d) => { d.fx = e.x; d.fy = e.y; })
+    .on("end", (e, d) => {
+      if (!e.active) sim.alphaTarget(0);
+      d.fx = null; d.fy = null;
+    });
+}
+
+function showTooltip(e, d) {
+  const desc = (d.description || "").slice(0, 160);
+  tooltip.innerHTML =
+    `<b>${d.case_id}</b> &middot; ${d.mechanism}` +
+    `<div class="t-meta">${d.date} &middot; ${d.jurisdiction || ""} &middot; ` +
+    `outcome: ${d.outcome || "?"}` +
+    (d.is_held_out_early ? ` &middot; <span style="color:#fff">held-out early</span>` : "") +
+    `</div>` +
+    (desc ? `<div class="t-meta" style="margin-top:6px;color:#cbd5e1">${desc}${d.description.length > 160 ? "…" : ""}</div>` : "");
+  tooltip.style.opacity = 1;
+  moveTooltip(e);
+}
+function moveTooltip(e) {
+  const pad = 14;
+  tooltip.style.left = (e.clientX + pad) + "px";
+  tooltip.style.top = (e.clientY + pad) + "px";
+}
+function hideTooltip() { tooltip.style.opacity = 0; }
+
+init();
+</script>
+</body>
+</html>

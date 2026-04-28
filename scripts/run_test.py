@@ -1,11 +1,11 @@
 """
 PFI Graph Test — leave-one-out position test.
 
-For each of the 4 cases:
-  - Build a Neo4j graph from the FULL timelines of the other 3 cases.
+For each held-out case:
+  - Build an in-memory graph from the FULL timelines of the other cases.
   - Drop in only the FIRST 3 actions of the held-out case.
-  - Connect nodes with SIMILAR_TO edges weighted by an explicit
-    force function over five dimensions (no embeddings).
+  - Connect nodes with edges weighted by an explicit force function over
+    five dimensions (no embeddings).
   - Report each held-out early action's top neighbors and what
     case + sequence position they occupy.
 
@@ -20,13 +20,10 @@ import json
 import math
 import os
 from datetime import datetime
-from neo4j import GraphDatabase
 
 EVENTS_PATH = "data/events.json"
 VIEWER_GRAPHS_DIR = "viewer/graphs"
 VIEWER_GRAPHS_JS = "viewer/graphs.js"
-NEO4J_URI = "bolt://localhost:7687"
-NEO4J_AUTH = ("neo4j", "pfi_graph_test")
 
 EARLY_WINDOW = 3
 EDGE_THRESHOLD = 0.5
@@ -106,64 +103,31 @@ def similarity(a, b):
     )
 
 
-def build_graph(driver, all_events, held_out_case):
+def build_graph(all_events, held_out_case):
     nodes = [
         e for e in all_events
         if e["case_id"] != held_out_case
         or e["case_position_index"] < EARLY_WINDOW
     ]
-
-    with driver.session() as session:
-        session.run("MATCH (n) DETACH DELETE n")
-
-        for e in nodes:
-            session.run(
-                """
-                CREATE (n:Action {
-                    node_id: $node_id, case_id: $case_id, date: $date,
-                    mechanism: $mechanism, jurisdiction_type: $jurisdiction_type,
-                    sequence_position: $sequence_position,
-                    seq_pos_norm: $seq_pos_norm, agency_level: $agency_level,
-                    elapsed_days: $elapsed_days,
-                    case_position_index: $case_position_index,
-                    outcome_category: $outcome_category,
-                    is_held_out_early: $held_out, description: $desc
+    edges = []
+    for i, a in enumerate(nodes):
+        for b in nodes[i + 1:]:
+            w = similarity(a, b)
+            if w >= EDGE_THRESHOLD:
+                edges.append({
+                    "source": a["node_id"],
+                    "target": b["node_id"],
+                    "weight": round(w, 4),
                 })
-                """,
-                node_id=e["node_id"],
-                case_id=e["case_id"],
-                date=e["date"],
-                mechanism=e["mechanism_category"],
-                jurisdiction_type=e["jurisdiction_type"],
-                sequence_position=e["sequence_position"],
-                seq_pos_norm=e["seq_pos_norm"],
-                agency_level=e["agency_level"],
-                elapsed_days=e["elapsed_days_since_prior"],
-                case_position_index=e["case_position_index"],
-                outcome_category=e.get("outcome_category"),
-                held_out=(e["case_id"] == held_out_case),
-                desc=e["action_description"][:200],
-            )
-
-        edge_count = 0
-        for i, a in enumerate(nodes):
-            for b in nodes[i + 1:]:
-                w = similarity(a, b)
-                if w >= EDGE_THRESHOLD:
-                    session.run(
-                        """
-                        MATCH (a:Action {node_id: $a_id}),
-                              (b:Action {node_id: $b_id})
-                        CREATE (a)-[:SIMILAR_TO {weight: $w}]->(b)
-                        """,
-                        a_id=a["node_id"], b_id=b["node_id"], w=round(w, 4),
-                    )
-                    edge_count += 1
-
-    return nodes, edge_count
+    return nodes, edges
 
 
-def report_case(driver, held_out_case, nodes, edge_count, cases):
+def report_case(held_out_case, nodes, edges, cases):
+    by_id = {n["node_id"]: n for n in nodes}
+    held_out_early_ids = {
+        n["node_id"] for n in nodes if n["case_id"] == held_out_case
+    }
+
     held_out_nodes = sorted(
         [n for n in nodes if n["case_id"] == held_out_case],
         key=lambda n: n["case_position_index"],
@@ -172,110 +136,95 @@ def report_case(driver, held_out_case, nodes, edge_count, cases):
     outcome_cat = case_meta.get("outcome_category", "unknown")
     print(f"\n{'=' * 72}")
     print(f"HELD-OUT CASE: {held_out_case}  (outcome: {outcome_cat})")
-    print(f"Graph: {len(nodes)} nodes, {edge_count} edges")
+    print(f"Graph: {len(nodes)} nodes, {len(edges)} edges")
     print(f"{'=' * 72}")
 
-    with driver.session() as session:
-        all_neighbor_mechs = []
-        all_neighbor_outcomes = []
-        held_out_actions = []
-        for n in held_out_nodes:
-            print(f"\n  Action #{n['case_position_index'] + 1}  "
-                  f"{n['date']}  [{n['mechanism_category']}]"
-                  f"  jurisdiction={n['jurisdiction_type']}")
-            print(f"    > {n['action_description'][:110]}")
+    all_neighbor_mechs = []
+    all_neighbor_outcomes = []
+    held_out_actions = []
+    for n in held_out_nodes:
+        print(f"\n  Action #{n['case_position_index'] + 1}  "
+              f"{n['date']}  [{n['mechanism_category']}]"
+              f"  jurisdiction={n['jurisdiction_type']}")
+        print(f"    > {n['action_description'][:110]}")
 
-            result = list(session.run(
-                """
-                MATCH (a:Action {node_id: $node_id})-[r:SIMILAR_TO]-(b:Action)
-                WHERE NOT b.is_held_out_early
-                RETURN b.case_id AS case, b.mechanism AS mechanism,
-                       b.sequence_position AS seq_pos, b.date AS date,
-                       b.outcome_category AS outcome,
-                       r.weight AS weight, b.description AS desc
-                ORDER BY r.weight DESC
-                LIMIT $k
-                """,
-                node_id=n["node_id"], k=TOP_K_NEIGHBORS,
-            ))
-
-            top_k = []
-            if not result:
-                print("    (no neighbors above threshold)")
+        candidates = []
+        for e in edges:
+            if e["source"] == n["node_id"]:
+                other_id = e["target"]
+            elif e["target"] == n["node_id"]:
+                other_id = e["source"]
             else:
-                print(f"    Top {len(result)} neighbors:")
-                for row in result:
-                    marker = " *" if row["mechanism"] in ESCALATION_MECHANISMS else "  "
-                    print(f"     {marker} {row['weight']:.3f}  "
-                          f"{row['case']:22s}  {row['date']}  "
-                          f"{row['mechanism']:28s}  "
-                          f"{(row['outcome'] or '?')[:8]:8s}  {row['seq_pos']}")
-                    all_neighbor_mechs.append(row["mechanism"])
-                    all_neighbor_outcomes.append(row["outcome"])
-                    top_k.append({
-                        "case": row["case"],
-                        "mechanism": row["mechanism"],
-                        "outcome": row["outcome"],
-                        "weight": round(row["weight"], 4),
-                        "date": row["date"],
-                        "seq_pos": row["seq_pos"],
-                        "is_escalation_mech": row["mechanism"] in ESCALATION_MECHANISMS,
-                    })
+                continue
+            if other_id in held_out_early_ids:
+                continue
+            candidates.append((e["weight"], by_id[other_id]))
+        candidates.sort(key=lambda x: -x[0])
+        top = candidates[:TOP_K_NEIGHBORS]
 
-            held_out_actions.append({
-                "idx": n["case_position_index"],
-                "date": n["date"],
-                "mechanism": n["mechanism_category"],
-                "jurisdiction": n["jurisdiction_type"],
-                "description": n["action_description"],
-                "node_id": n["node_id"],
-                "top_k": top_k,
-            })
+        top_k = []
+        if not top:
+            print("    (no neighbors above threshold)")
+        else:
+            print(f"    Top {len(top)} neighbors:")
+            for weight, b in top:
+                marker = " *" if b["mechanism_category"] in ESCALATION_MECHANISMS else "  "
+                outcome = b.get("outcome_category") or "?"
+                print(f"     {marker} {weight:.3f}  "
+                      f"{b['case_id']:22s}  {b['date']}  "
+                      f"{b['mechanism_category']:28s}  "
+                      f"{outcome[:8]:8s}  {b['sequence_position']}")
+                all_neighbor_mechs.append(b["mechanism_category"])
+                all_neighbor_outcomes.append(b.get("outcome_category"))
+                top_k.append({
+                    "case": b["case_id"],
+                    "mechanism": b["mechanism_category"],
+                    "outcome": b.get("outcome_category"),
+                    "weight": weight,
+                    "date": b["date"],
+                    "seq_pos": b["sequence_position"],
+                    "is_escalation_mech": b["mechanism_category"] in ESCALATION_MECHANISMS,
+                })
 
-        esc_pct = 0
-        clean_pct = 0
-        if all_neighbor_mechs:
-            total = len(all_neighbor_mechs)
-            esc = sum(1 for m in all_neighbor_mechs if m in ESCALATION_MECHANISMS)
-            esc_pct = 100 * esc // total
-            clean_neigh = sum(1 for o in all_neighbor_outcomes if o == "clean")
-            clean_pct = 100 * clean_neigh // total
-            print(f"\n  Neighborhood profile: "
-                  f"{esc}/{total} ({esc_pct}%) escalation-type mechanisms; "
-                  f"{clean_neigh}/{total} ({clean_pct}%) neighbors from clean cases")
-        return {
-            "case_id": held_out_case,
-            "outcome": outcome_cat,
-            "escalation_pct": esc_pct,
-            "clean_neighbor_pct": clean_pct,
-            "neighbor_count": len(all_neighbor_mechs),
-            "node_count": len(nodes),
-            "edge_count": edge_count,
-            "held_out_actions": held_out_actions,
-        }
+        held_out_actions.append({
+            "idx": n["case_position_index"],
+            "date": n["date"],
+            "mechanism": n["mechanism_category"],
+            "jurisdiction": n["jurisdiction_type"],
+            "description": n["action_description"],
+            "node_id": n["node_id"],
+            "top_k": top_k,
+        })
+
+    esc_pct = 0
+    clean_pct = 0
+    if all_neighbor_mechs:
+        total = len(all_neighbor_mechs)
+        esc = sum(1 for m in all_neighbor_mechs if m in ESCALATION_MECHANISMS)
+        esc_pct = 100 * esc // total
+        clean_neigh = sum(1 for o in all_neighbor_outcomes if o == "clean")
+        clean_pct = 100 * clean_neigh // total
+        print(f"\n  Neighborhood profile: "
+              f"{esc}/{total} ({esc_pct}%) escalation-type mechanisms; "
+              f"{clean_neigh}/{total} ({clean_pct}%) neighbors from clean cases")
+    return {
+        "case_id": held_out_case,
+        "outcome": outcome_cat,
+        "escalation_pct": esc_pct,
+        "clean_neighbor_pct": clean_pct,
+        "neighbor_count": len(all_neighbor_mechs),
+        "node_count": len(nodes),
+        "edge_count": len(edges),
+        "held_out_actions": held_out_actions,
+    }
 
 
-def export_graph_json(driver, summary):
+def export_graph_json(summary, nodes, edges):
     case_id = summary["case_id"]
     os.makedirs(VIEWER_GRAPHS_DIR, exist_ok=True)
-    with driver.session() as session:
-        nodes = [dict(r) for r in session.run(
-            """
-            MATCH (n:Action)
-            RETURN n.node_id AS id, n.case_id AS case_id, n.date AS date,
-                   n.mechanism AS mechanism, n.jurisdiction_type AS jurisdiction,
-                   n.sequence_position AS seq_pos,
-                   n.outcome_category AS outcome,
-                   n.is_held_out_early AS is_held_out_early,
-                   n.description AS description
-            """
-        )]
-        edges = [dict(r) for r in session.run(
-            """
-            MATCH (a:Action)-[r:SIMILAR_TO]->(b:Action)
-            RETURN a.node_id AS source, b.node_id AS target, r.weight AS weight
-            """
-        )]
+    held_out_early_ids = {
+        n["node_id"] for n in nodes if n["case_id"] == case_id
+    }
     payload = {
         "case_id": case_id,
         "outcome": summary["outcome"],
@@ -287,7 +236,20 @@ def export_graph_json(driver, summary):
             "edge_count": summary["edge_count"],
         },
         "held_out_actions": summary["held_out_actions"],
-        "nodes": nodes,
+        "nodes": [
+            {
+                "id": n["node_id"],
+                "case_id": n["case_id"],
+                "date": n["date"],
+                "mechanism": n["mechanism_category"],
+                "jurisdiction": n["jurisdiction_type"],
+                "seq_pos": n["sequence_position"],
+                "outcome": n.get("outcome_category"),
+                "is_held_out_early": n["node_id"] in held_out_early_ids,
+                "description": n["action_description"][:200],
+            }
+            for n in nodes
+        ],
         "edges": edges,
     }
     path = os.path.join(VIEWER_GRAPHS_DIR, f"{case_id}.json")
@@ -314,10 +276,9 @@ def write_combined_graphs_js(case_ids):
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument("--case", help="Run only this held-out case (leaves graph in Neo4j for inspection)")
+    p.add_argument("--case", help="Run only this held-out case")
     args = p.parse_args()
 
-    driver = GraphDatabase.driver(NEO4J_URI, auth=NEO4J_AUTH)
     all_events, cases = load_events()
     case_ids = sorted({e["case_id"] for e in all_events})
 
@@ -335,18 +296,15 @@ def main():
         if case not in case_ids:
             print(f"Unknown case: {case}. Available: {case_ids}")
             continue
-        nodes, edges = build_graph(driver, all_events, case)
-        summary = report_case(driver, case, nodes, edges, cases)
-        export_graph_json(driver, summary)
+        nodes, edges = build_graph(all_events, case)
+        summary = report_case(case, nodes, edges, cases)
+        export_graph_json(summary, nodes, edges)
         exported_cases.append(case)
         summaries.append(summary)
-
-    driver.close()
 
     if exported_cases:
         write_combined_graphs_js(case_ids)
         print(f"\nViewer data written to {VIEWER_GRAPHS_DIR}/ and {VIEWER_GRAPHS_JS}")
-        print("Open viewer/index.html in your browser.")
 
     if len(summaries) > 1:
         print(f"\n{'=' * 72}")
@@ -363,8 +321,7 @@ def main():
         print("  escalation cases should show the inverse.")
 
     print(f"\n{'=' * 72}")
-    print(f"Done. Last graph built ({targets[-1]}) is live in Neo4j — "
-          f"browse at http://localhost:7474")
+    print("Done. Open viewer/index.html in your browser.")
 
 
 if __name__ == "__main__":

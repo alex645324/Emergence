@@ -1,0 +1,26 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Local-only project work (separate sub-project)
+Later_intergration/
+
+# Internal methodology / build briefs / framing docs (kept local only)
+Tools/
+STATUS.md
+
+# Redundant
+start.md
+
+# Old data exports
+Data/Proof Sheet-4.xlsx

@@ -39,17 +39,6 @@ back on. The fuel's different; the fight is the same shape. Think of it as an
 
 ---
 
-## Demo
-
-https://github.com/user-attachments/assets/b2ac8e0d-8ca1-45ac-8204-0ee32fac8853
-
-Pick a project from the dropdown. The others settle into their natural clusters.
-Hit **inject case**, and the hidden early actions drift over to where they
-belong. That's the whole magic trick — no smoke, no mirrors, just physics being
-nosy.
-
----
-
 ## The idea, explained like I'd tell a friend
 
 Every piece of data is an **atom**. Atoms feel a pull toward each other; strong
@@ -137,6 +126,15 @@ flowchart TD
   F --> H[Then check what REALLY happened]
   G --> H
 ```
+
+### Here's it actually doing it
+
+https://github.com/user-attachments/assets/b2ac8e0d-8ca1-45ac-8204-0ee32fac8853
+
+Pick a project from the dropdown. The others settle into their natural clusters.
+Hit **inject case**, and the hidden early actions drift over to where they
+belong. That's the whole magic trick — no smoke, no mirrors, just physics being
+nosy.
 
 ---
 

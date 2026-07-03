@@ -23,7 +23,8 @@ substation — you sink tens or hundreds of millions into it *before* you know
 whether the town and the regulators will let it happen. Plenty of these projects
 get quietly strangled: lawsuits, zoning denials, fire-code fights, county
 moratoriums. And by the time the opposition is obvious, the money's already
-spent. There's basically **no early warning.**
+spent. There's basically **no early warning** — you find out you're in a knife
+fight after you've already brought a checkbook.
 
 That's what I'm going after: **can you tell, from a project's first few moves,
 which way it's leaning — quiet build or headed for a fight?** Not by guessing, but
@@ -40,19 +41,12 @@ back on. The fuel's different; the fight is the same shape. Think of it as an
 
 ## Demo
 
-<!--
-  TO EMBED THE VIDEO: open any GitHub issue/comment box on this repo, drag in
-  `Experiment_v1/Demo.mov`, and GitHub gives you a link like
-  https://github.com/user-attachments/assets/xxxx — paste it on the line below.
--->
-
-https://github.com/user-attachments/assets/REPLACE_WITH_UPLOADED_VIDEO_URL
-
-> ▶️ *Video not showing? Drop `Experiment_v1/Demo.mov` into a GitHub comment box
-> to get the embeddable link, then paste it on the line above.*
+https://github.com/user-attachments/assets/b2ac8e0d-8ca1-45ac-8204-0ee32fac8853
 
 Pick a project from the dropdown. The others settle into their natural clusters.
-Hit **inject case**, and the hidden early actions drift over to where they belong.
+Hit **inject case**, and the hidden early actions drift over to where they
+belong. That's the whole magic trick — no smoke, no mirrors, just physics being
+nosy.
 
 ---
 
@@ -169,7 +163,8 @@ flowchart TD
 - **The one that got withdrawn (Flat Rock) landed in trouble territory — exactly
   right.** It got killed by opposition, and the structure smelled it from 3 moves.
 
-**8 of 11 landed where they should. Honestly better than I expected.**
+**8 of 11 landed where they should. Honestly better than I expected — I braced
+for a pile of noise and got a signal instead.**
 
 **The 3 misses I actually like** (a thing that never explains its misses isn't
 trustworthy):
@@ -182,7 +177,7 @@ trustworthy):
 - **Katy** barely stuck to anything — it's the only project with a zoning denial,
   so nothing else matches it. That's a data gap, not a method failure.
 
-None are bugs. Each is a to-do for the next version.
+None are bugs. Each is a to-do for the next version wearing a trench coat.
 
 ---
 
